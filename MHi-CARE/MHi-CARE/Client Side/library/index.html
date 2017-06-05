@@ -8,8 +8,30 @@
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
-		 <link rel="stylesheet" href="../assets/addons/pager/jquery.tablesorter.pager.css" />	
+		<!-- <link rel="stylesheet" href="../assets/addons/pager/jquery.tablesorter.pager.css" />	-->
+		<!-- Pratima changed below css link that was first inserted by Jason  -->
+		<!--
+		<link rel="stylesheet" href="../assets/addons/pager/jquery.tablesorter.pager.css" />	-->
+		
+		 <!--Pratima Test Code Starts-->
+			<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+			<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>  
+			<script>
+			$(document).ready(function() {
+				$('#mtable').DataTable( {
+					"pagingType": "full_numbers"
+				} );
+			} );
+
+			</script>
 	</head>
+	<body>
+
+		 <!--Pratima Test Code Ends-->
+		 
+	<!--</head>  -->
+	
 	<body class="no-sidebar">
 		<div id="page-wrapper">
 			<!-- Header -->

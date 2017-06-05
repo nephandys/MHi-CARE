@@ -63,7 +63,7 @@
 											<input name="email" placeholder="Email" type="email" />
 										</div>
 										<div class="6u 12u(mobile)">
-											<input name="department" placeholder="Department" type="text" />
+											<input name="study title" placeholder="Study Title" type="text" />
 										</div>
 									</div>
 									<div class="row 50%">
@@ -71,59 +71,60 @@
 											<input name="study pi" placeholder="Study PI" type="text" />
 										</div>
 										<div class="6u 12u(mobile)">
-											<input name="study title" placeholder="Study Title" type="text" />
+											<input name="contact" placeholder="Contact (if different from PI)" type="text" />
 										</div>
 									</div>
 									<div class="row 50%">
-										<div class="6u 12u(mobile)">
-											<input name="contact" placeholder="Contact (if different from PI)" type="text" />
-										</div>
 										<div class="6u 12u(mobile)">
 											<input name="irb" placeholder="IRB Status (IRB number/name and status)" type="text" />
 										</div>
-									</div>
-									<div class="row 50%">
 										<div class="6u 12u(mobile)">
 											<input name="funding" placeholder="Funding Available (enter cost center number)" type="text" />
 										</div>
-										<div class="6u 12u(mobile)">
-											<input name="frequency" placeholder="Extract Frequency (1x/daily/weekly/monthly/etc)" type="text" />
-										</div>
 									</div>
 									<div class="row 50%">
-										<div class="6u 12u(mobile)">
-											<input name="data source" placeholder="Data Source (EPIC/REDCap/etc)" type="text" />
-										</div>
-										<div class="6u 12u(mobile)">
-											<input name="structure" placeholder="Extract Structure (Excel/pipe-delimited/CSV/SQL tables)" type="text" />
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="6u 12u(mobile)">
-											<input name="delivery" placeholder="Data Delivered to... (sever-name/share name/JHBox/etc)" type="text" />
-										</div>
-										<div class="6u 12u(mobile)">
-											<input name="work" placeholder="Work Estimate (estimate in hours)" type="text" />
+										<div class="12u">
+											<textarea name="team" placeholder="Study Team Members - Please provide name/credentials, role, JHED ID, and email for each team member"></textarea>
 										</div>
 									</div>
 									<div class="row 50%">
 										<div class="12u">
-											<textarea name="extract purpose" placeholder="Extract Purpose - Brief description of study as well as purpose for extracting data"></textarea>
+											<textarea name="external" placeholder="External Involvement - Please provide information on any intent to share outside of JHM. This includes corporate sponsors and multi-site studies. Also include information on what data elements are proposed to be shared and in what format (PHI, limited data set, etc)"></textarea>
+										</div>
+									</div>									
+									<div class="row 50%">
+										<div class="12u">
+											<textarea name="description" placeholder="Brief Description of Project - please provide a brief overview of your project"></textarea>
 										</div>
 									</div>
 									<div class="row 50%">
 										<div class="12u">
-											<textarea name="inclusion" placeholder="Data shared with external entity? - Include information on researcher's intent to share outside of JHM. This includes corporate sponsors and multi-site studies. Also include information on what data elements are proposed to be shared and in what format (PHI, limited data set, etc)"></textarea>
+											<textarea name="inclusion" placeholder="Inclusion Criteria - Patients with the following criteria will be included in your study - Who? (ex: adult/pediatrics); Where? (ex: outpatient/inpatient/in specific clinics); When? (ex: date/time range/retrospective/prospective); What? (ex: diagnosis/lab results/meds/other conditions)"></textarea>
 										</div>
 									</div>
 									<div class="row 50%">
 										<div class="12u">
-											<textarea name="inclusion" placeholder="Inclusion Criteria - Only patients with the following criteria will be included in the extract results: Who? (adult or pediatrics?)/Where? (outpatient or inpatient? in specific clinics?)/When? (date/time range)/What? (disease/lab results/meds/other conditions?)"></textarea>
+											<textarea name="exclusion" placeholder="Exclusion Criteria - Patients with the following criteria will be excluded from your study - (ex: Deceased/Other comorbidities/Other exclusions)"></textarea>
 										</div>
 									</div>
 									<div class="row 50%">
 										<div class="12u">
-											<textarea name="exclusion" placeholder="Exclusion Criteria - Patients with the following criteria will be excluded in the extract results: (Deceased? Other comorbidities? Other exclusions?)"></textarea>
+											<textarea name="where" placeholder="Where will your study take place? Please include clinic (ex: Adult Outpatient) and facility (JHBMC/JHH/etc.)"></textarea>
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<textarea name="what" placeholder="What information are you looking to gather on your specified patient population? Please specify if applicable: data outside of measures (demographics/labs/meds/etc), types of measures, need for recruitment, and need for data extraction?"></textarea>
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<textarea name="how" placeholder="How will data be collected? (ex: Welcome/MyChart/REDCap/Other) How will the data be used?"></textarea>
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+											<textarea name="when" placeholder="Please specify the timeframe when your study will take place and how frequently you'd like to obtain data from patients."></textarea>
 										</div>
 									</div>
 									<div class="row 50%">

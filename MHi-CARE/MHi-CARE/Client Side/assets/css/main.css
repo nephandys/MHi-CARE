@@ -1915,14 +1915,8 @@
 			}
 			
 /* Measures Table */		
-	#mtable th {
-			font-size: 0.9em;
-	}
 	#mtable th:hover {
 			cursor: pointer;
-	}
-	#mtable td {
-			font-size: 0.85em;
 	}
 
 /* Button */

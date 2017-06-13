@@ -1854,6 +1854,7 @@
 		form input[type="email"]:focus,
 		form input[type="password"]:focus,
 		form input[type="date"]:focus,
+		form input[type="checkbox"]:focus,
 		form select:focus,
 		form textarea:focus {
 			background: #fff;

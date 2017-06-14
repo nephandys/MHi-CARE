@@ -1865,23 +1865,23 @@
 	}
 
 	form .formerize-placeholder {
-		color: #555 !important;
+		color: #9fa1a5 !important;
 	}
 
 	form ::-webkit-input-placeholder {
-		color: #555 !important;
+		color: #9fa1a5 !important;
 	}
 
 	form :-moz-placeholder {
-		color: #555 !important;
+		color: #9fa1a5 !important;
 	}
 
 	form ::-moz-placeholder {
-		color: #555 !important;
+		color: #9fa1a5 !important;
 	}
 
 	form :-ms-input-placeholder {
-		color: #555 !important;
+		color: #9fa1a5 !important;
 	}
 
 	form ::-moz-focus-inner {

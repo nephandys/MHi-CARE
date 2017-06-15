@@ -29,6 +29,12 @@
 			});
 		</script>
 		
+		<script>
+			function myDeleteFunction() {
+    			document.getElementById("stmember").deleteRow(0);
+			}
+		</script>
+		
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -158,12 +164,12 @@
         										<label for="emailst1"></label>
         										<input type="email" name="emailst1" id="emailst1" placeholder="you@example.com" />
       										</td>
-      										<td>
-      											<a onclick="delTableRow($('#stmember'));" href="#">Remove<br />Study Team<br />Member<br /></a>
-      										</td>
   										</tr>
 									</table>
-									<center><button type="button" onclick="addTableRow($('#stmember'));">Add Study Team Member</button></center>
+									<center>
+										<button type="button" onclick="addTableRow($('#stmember'));">Add Study Team Member</button>
+										<button type="button" onclick="myDeleteFunction()">Remove Study Team Member</button>
+									</center>
 									<br />
 									<h3><strong>Study Information:</strong></h3>
 									<div class="row 33%">

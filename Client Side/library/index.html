@@ -1,5 +1,3 @@
- 
- 
 <!DOCTYPE HTML>
 <html>
 	<head>		
@@ -11,29 +9,26 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
 		<!-- <link rel="stylesheet" href="../assets/addons/pager/jquery.tablesorter.pager.css" />	-->
-		<!--
-		<link rel="stylesheet" href="../assets/addons/pager/jquery.tablesorter.pager.css" />	-->
-		 <!--Pratima Test Code Starts-->
-			<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-			<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-			<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>  
-			<script>
+		<!-- <link rel="stylesheet" href="../assets/addons/pager/jquery.tablesorter.pager.css" />	-->
+			
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>  
+		<script>
 			$(document).ready(function() {
 				$('#mtable').DataTable( {
 					"pagingType": "full_numbers"
 				} );
 			} );
  
-			</script>
-			
+		</script>
+
 			<style>table#mtable tr:nth-child(2n+1) {
 					background: #edf4ff;
-				}</style>
-					
+				}</style>				
 	</head>
-	<body>
-		 
-	<!--</head>  -->
+	
+	<!-- BODY STARTS -->	
 	
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -56,7 +51,12 @@
 											<li><a href="../faq">MHi-FAQ</a></li>											
 										</ul>
 									</li>
-									<li class="break"><a href="../resources.html">Resources</a></li>
+									<li class="break"><a href="../resources.html">Resources</a>
+										<ul>
+											<li><a href="../resources/patresource.html">Patient</a></li>
+											<li><a href="../resources/proresource.html">Provider</a></li>										
+										</ul>
+									</li>
 									<li><a href="../about.html">About</a></li>
 								</ul>
 							</nav>
@@ -928,21 +928,23 @@
 					</div>
 					<div id="copyright" class="container">
 						<ul class="menu">
-							<li><a href="http://www.hopkinsmedicine.org/psychiatry"><img src="../images/hopkins.png" /></a></li> <br/>
-							<li>&copy; Untitled. All rights reserved.</li> <br/>
+							<li><a href="http://www.hopkinsmedicine.org/psychiatry"><img src="../images/hopkins.png" /></a></li> 
+							<br/>
+							<li>&copy; Untitled. All rights reserved.</li> 
+							<br/>
 						</ul>
 					</div>
 				</div>
 		</div>
 </body>
-		<!-- Scripts
- 
-			<script src="../assets/js/jquery.min.js"></script>
+		<!-- Scripts -->
 			<script src="../assets/js/jquery.dropotron.min.js"></script>
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/util.js"></script>
-			[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]
-			<script src="../assets/js/main.js"></script> -->
+			<script src="../assets/js/main.js"></script>
+			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+			<!-- script src="../assets/js/jquery.min.js"></script> -->
+		
 </html>
  
  

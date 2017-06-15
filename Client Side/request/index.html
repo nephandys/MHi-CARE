@@ -20,13 +20,6 @@
 					}else {$(this).append(tds);}
 				});
 			}
-
-			$(function(){
-				$('table').on('click','tr a',function(e){
-	  				e.preventDefault();
-	  			  $(this).parents('tr').remove();
-				});
-			});
 		</script>
 		
 		<script>
@@ -167,8 +160,8 @@
   										</tr>
 									</table>
 									<center>
-										<button type="button" onclick="addTableRow($('#stmember'));">Add Study Team Member</button>
-										<button type="button" onclick="myDeleteFunction()">Remove Study Team Member</button>
+										<button type="button" id="add" onclick="addTableRow($('#stmember'));">Add Study Team Member</button>
+										<button type="button" id="delete" onclick="myDeleteFunction()">Remove Study Team Member</button>
 									</center>
 									<br />
 									<h3><strong>Study Information:</strong></h3>

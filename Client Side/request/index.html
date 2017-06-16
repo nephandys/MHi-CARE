@@ -45,8 +45,28 @@
 		.model-row {
   			display: none;
 		}
+		
+		ul#request-list {
+			padding-left: 25px;
+		}
+		
+		ul.checklist {
+			padding-left: 20px;
+			margin-bottom: 15px;
+		}		
+		
+		.quest-header {
+			font-size: 115%;
+		}
+		
+		div#exclude {
+			margin-top: 0px;
+			padding-top: 0px;
+		}		
 	</style>
+	
 	</head>
+	
 	<body class="no-sidebar">
 		<div id="page-wrapper">
 
@@ -93,7 +113,8 @@
 								</header>
 								<a href="#" class="image featured"><img src="../images/gradient2.png" alt="" /></a>
 								<form method="post" action="mailto:jstraub2@jhmi.edu" enctype="text/plain">
-									<h3><strong>Submitter Information:</strong></h3>
+									<h3><strong>Study Team Information:</strong></h3>
+									<h3 class="quest-header"><strong>Submitter:</strong></h3>
 									<div class="row 33%">
 										<div class="4u 8u(mobile)">
 										Name:
@@ -109,7 +130,7 @@
 										</div>
 									</div>
 									<br />
-									<h3><strong>PI Information:</strong></h3>
+									<h3 class="quest-header"><strong>PI:</strong></h3>
 									<div class="row 33%">
 										<div class="4u 8u(mobile)">
 										Name:
@@ -160,7 +181,7 @@
 										</div>
 									</div>
 									<br />
-									<h3><strong>Other Study Team Members:</strong></h3>
+									<h3 class="quest-header"><strong>Other Study Team Members:</strong></h3>
 									<table id="stmember">
       									<tbody>
         									<tr class="model-row">
@@ -195,12 +216,64 @@
 											<input name="startdate" type="text">
 										</div>
 										<div class="4u 8u(mobile)">
-										Estimated Study Length:
+										Estimated End Date:
 											<input name="length" type="text" />
 										</div>
 									</div>
-									<div class="row 33%">
-										<div class="4u 8u(mobile)">
+									<div class="row 50%">
+										<div class="12u">
+										Brief Description of Project - please provide a brief overview of your research study
+											<textarea name="description"></textarea>
+										</div>
+									</div>
+									<br />
+									<h3 class="quest-header"><strong>Who are the patients you want to work with?</strong></h3>
+									<div class="row 50%">
+										<div class="6u 12u(mobile)">
+										Age(s):
+											<input name="age" type="text">
+										</div>
+										<div class="6u 12u(mobile)">
+										Sex:
+											<select name="sex">
+												<option value="blank"></option>
+    											<option value="female">Female</option>
+    											<option value="male">Male</option>
+    											<option value="both">Both</option>
+  											</select>
+										</div>
+									</div>
+									<div class="row 50%">
+										<div class="6u 12u(mobile)">
+										Race: (Check all that apply)<br />
+											<ul class="checklist">
+												<li><input type="checkbox" name="vehicle" value="Bike">American Indian or Alaska Native</li>
+										 		<li><input type="checkbox" name="vehicle" value="Car">Asian</li>
+										 		<li><input type="checkbox" name="vehicle" value="Car">Black or African American</li>
+										 		<li><input type="checkbox" name="vehicle" value="Car">Native Hawaiian or Other Pacific Islander</li>	
+										 		<li><input type="checkbox" name="vehicle" value="Car">White</li>
+										 		<li><input type="checkbox" name="vehicle" value="Car">All</li>
+										 	</ul>
+										</div>										
+										<div class="6u 12u(mobile)">
+										Ethnicity: <br />
+											<ul class="checklist">
+												<li><input type="checkbox" name="vehicle" value="Bike">Hispanic or Latino</li>
+										 		<li><input type="checkbox" name="vehicle" value="Car">Not Hispanic or Latino</li>
+										 		<li><input type="checkbox" name="vehicle" value="Car">All</li>
+										 	</ul>
+										</div>										
+									</div>
+									<div class="row 50%">
+										<div class="12u" id="exclude">
+										Exclusion Criteria - Patients with the following criteria will be excluded from your study - (ex: Deceased/Other comorbidities/Other exclusions):
+											<textarea name="exclusion"></textarea>
+										</div>
+									</div>
+									<br />
+									<h3 class="quest-header"><strong>Where will your study take place?</strong></h3>
+									<div class="row 50%">
+										<div class="6u 12u(mobile)">
 										Facility:
 											<select name="facility">
 												<option value="blank"></option>
@@ -210,18 +283,7 @@
     											<option value="outpt">N/A</option>
   											</select>	
 										</div>
-										<div class="4u 8u(mobile)">
-										Age of Target Population:
-											<select name="popage">
-												<option value="blank"></option>
-    											<option value="peds">Pediatric</option>
-    											<option value="adult">Adult</option>
-    											<option value="geri">Geriatric</option>
-    											<option value="all">All</option>
-    											<option value="outpt">N/A</option>
-  											</select>	
-										</div>
-										<div class="4u 8u(mobile)">
+										<div class="6u 12u(mobile)">
 										Level of Care:
 											<select name="lvlcare">
 												<option value="blank"></option>
@@ -230,56 +292,26 @@
     											<option value="lvlboth">Both</option>
     											<option value="lvlna">N/A</option>
   											</select>	
+										</div>
+									</div>					
+									<div class="row 50%">
+										<div class="12u">
+										Please provide any additional information concerning location (team/program/etc.):
+											<textarea name="locinfo"></textarea>
 										</div>										
+									</div>
+									<div class="row 50%">
+										<div class="12u">
+										Which of the following would you like to do with your specified patient population? (Check all that apply)<br />
+											<ul id="request-list">
+												<li><input type="checkbox" name="vehicle" value="Bike"> Recruitment for research</li>
+										 		<li><input type="checkbox" name="vehicle" value="Car"> Electronic Data Capture</li>
+										 		<li><input type="checkbox" name="vehicle" value="Car"> Registry</li>
+										 		<li><input type="checkbox" name="vehicle" value="Car"> Data Extraction</li>	
+										 		<li><input type="checkbox" name="vehicle" value="Car">Estimate of number of patients in a target population</li>	
+										 	</ul>
+										 </div>
 									</div>								
-									<div class="row 50%">
-										<div class="12u">
-										Brief Description of Project - please provide a brief overview of your research study
-											<textarea name="description"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-										What information would you like to gather on your target population? Please specify if applicable: data outside of measures (demographics/labs/meds/etc) as well as any measures and their types.
-											<textarea name="whatinfo"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-										How will data be collected? (ex: Welcome/MyChart/REDCap/Other) How will the data be used?
-											<textarea name="how"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-										How frequently do you anticipate wanting to obtain data from patients? Do you require any retrospective data?
-											<textarea name="frequency"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-										Exclusion Criteria - Patients with the following criteria will be excluded from your study - (ex: Deceased/Other comorbidities/Other exclusions):
-											<textarea name="exclusion"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-										What role do you envision the MHi-CARE team playing in your research? (Recruitment, electronic data capture, data extraction, other).
-											<textarea name="whatrole"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-										External Involvement - Please provide information on any intent to share outside of JHM. This includes corporate sponsors and multi-site studies. Also include information on what data elements are proposed to be shared and in what format (PHI, limited data set, etc)
-											<textarea name="external"></textarea>
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-										Additional Comments or Questions:
-											<textarea name="comments"></textarea>
-										</div>
-									</div>
 									<div class="row 50%">
 										<div class="12u">
 										<center>

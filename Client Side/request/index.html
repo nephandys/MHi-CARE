@@ -8,26 +8,44 @@
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
-		
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> 
-		<script type="text/javascript">
-			function addTableRow(jQtable){
-				jQtable.each(function(){
-					var tds = '<tr>';
-					jQuery.each($('tr:last td', this), function() {tds += '<td>'+$(this).html()+'</td>';});
-					tds += '</tr>';
-					if($('tbody', this).length > 0){$('tbody', this).append(tds);
-					}else {$(this).append(tds);}
-				});
-			}
-		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		
 		<script>
-			function myDeleteFunction() {
-    			document.getElementById("stmember").deleteRow(0);
+		function addTableRow() {
+	  		var $tableRow = $('tr.model-row:first-child');
+	  		var $clonedRow = $tableRow.clone().show();
+	  		$('#stmember').append($clonedRow);
 			}
-		</script>
-		
+
+			function myDeleteFunction() {
+	  		var $memberTRs = $('tr', '#stmember');
+	  		// If rowcount === 1, hide first row, don't remove it!!
+	  		var rowCount = $memberTRs.length;
+	  		if (rowCount === 1) {
+	    		$('tr.model-row:first-child').hide();
+	    		return;
+	  		}
+	  		$memberTRs.last().remove();
+			}
+
+			jQuery(function() {
+
+	  		$('#delete').click(function() {
+	    		myDeleteFunction();
+	  		});
+
+	  		$('#add').click(function() {
+	    		addTableRow();
+	  		});
+
+		});
+	</script>
+	
+	<style>
+		.model-row {
+  			display: none;
+		}
+	</style>
 	</head>
 	<body class="no-sidebar">
 		<div id="page-wrapper">
@@ -144,25 +162,27 @@
 									<br />
 									<h3><strong>Other Study Team Members:</strong></h3>
 									<table id="stmember">
- 										<tr>
-   											<td>Name:
-        										<label for="namest1"></label>
-        										<input type="text" name="namest1" id="namest1" placeholder="First Name, Last Name" />
-      										</td>
-    										<td>JHED ID:
-        										<label for="jhedst1"></label>
-        										<input type="text" name="jhedst1" id="jhedst1" />
-      										</td>
-    										<td>Email:
-        										<label for="emailst1"></label>
-        										<input type="email" name="emailst1" id="emailst1" placeholder="you@example.com" />
-      										</td>
-  										</tr>
-									</table>
-									<center>
-										<button type="button" id="add" onclick="addTableRow($('#stmember'));">Add Study Team Member</button>
-										<button type="button" id="delete" onclick="myDeleteFunction()">Remove Study Team Member</button>
-									</center>
+      									<tbody>
+        									<tr class="model-row">
+          										<td>Name:
+            										<label for="namest1"></label>
+            										<input type="text" name="namest1[]" id="namest1" placeholder="First Name, Last Name" />
+          										</td>
+          										<td>JHED ID:
+            										<label for="jhedst1"></label>
+            										<input type="text" name="jhedst1[]" id="jhedst1" />
+          										</td>
+          										<td>Email:
+            										<label for="emailst1"></label>
+            										<input type="email" name="emailst1[]" id="emailst1" placeholder="you@example.com" />
+          										</td>
+        									</tr>
+      									</tbody>
+    								</table>
+    								<center>
+      									<button type="button" id="add">Add Study Team Member</button>
+      									<button type="button" id="delete">Remove Study Team Member</button>
+    								</center>
 									<br />
 									<h3><strong>Study Information:</strong></h3>
 									<div class="row 33%">

@@ -464,7 +464,7 @@ input[data-wslist]::-webkit-calendar-picker-indicator {
 .ws-errorbox p {
   margin: 2px 0 3px;
   padding: 0;
-  color: #a94442;
+  color: #e72705;
 }
 
 progress {

@@ -15,7 +15,7 @@
 		<script>
 		webshim.setOptions('forms', {
 		    lazyCustomMessages: true,
-		    addValidators: true
+		    addValidators: true 
 		});
 		
 		webshim.polyfill('forms forms-ext');
@@ -59,7 +59,7 @@
 		}
 		</script>
                 	
-		<style>
+		<style>            
                     input::-webkit-datetime-edit{ 
                         color: transparent; 
                     }
@@ -321,12 +321,13 @@
 									</div>
 									<div class="row 50%">
 										<div class="12u">
+                                                                                <h3><strong>MHi-CARE Tools:</strong></h3>
 										Which of the following would you like to do with your specified patient population? Check all that apply.<br />
 											<ul class="list">
 												<li><input type="checkbox" id="recruit" name="todo" value="1" onclick="showMe('div1', this)" onchange="document.getElementById('method1').disabled = !this.checked; document.getElementById('method2').disabled = !this.checked; document.getElementById('method3').disabled = !this.checked;" data-grouprequired=""> Recruitment for research</li>
-												<li><input type="checkbox" id="edc" name="todo" value="2" onclick="showMe('div2', this)" onchange="document.getElementById('capture1').disabled = !this.checked; document.getElementById('capture2').disabled = !this.checked; document.getElementById('capture3').disabled = !this.checked; document.getElementById('capture4').disabled = !this.checked; document.getElementById('capture5').disabled = !this.checked; document.getElementById('capture6').disabled = !this.checked; document.getElementById('edcdelivery').disabled = !this.checked; document.getElementById('edcformat').disabled = !this.checked; document.getElementById('edcvisual').disabled = !this.checked;"> Electronic Data Capture</li>
+												<li><input type="checkbox" id="edc" name="todo" value="2" onclick="showMe('div2', this)" onchange="document.getElementById('capture1').disabled = !this.checked; document.getElementById('capture2').disabled = !this.checked; document.getElementById('capture3').disabled = !this.checked; document.getElementById('capture4').disabled = !this.checked; document.getElementById('capture5').disabled = !this.checked; document.getElementById('capture6').disabled = !this.checked; document.getElementById('capture7').disabled = !this.checked; document.getElementById('capture8').disabled = !this.checked; document.getElementById('capture9').disabled = !this.checked; document.getElementById('edcdelivery').disabled = !this.checked; document.getElementById('edcformat').disabled = !this.checked; document.getElementById('edcvisual').disabled = !this.checked;"> Electronic Data Capture</li>
 												<li><input type="checkbox" id="registry" name="todo" value="3" onclick="showMe('div3', this)" onchange="document.getElementById('diagnoses').disabled = !this.checked; document.getElementById('problem_list').disabled = !this.checked; document.getElementById('meds').disabled = !this.checked; document.getElementById('labs').disabled = !this.checked; document.getElementById('other').disabled = !this.checked;"> Registry</li>
-												<li><input type="checkbox" id="dextract" name="todo" value="4" onclick="showMe('div4', this)" onchange="document.getElementById('dextdata').disabled = !this.checked; document.getElementById('dextdelivery').disabled = !this.checked; document.getElementById('dextformat').disabled = !this.checked;"> Data Extraction</li>	
+												<li><input type="checkbox" id="dextract" name="todo" value="4" onclick="showMe('div4', this)" onchange="document.getElementById('dextdata').disabled = !this.checked; document.getElementById('dextdelivery').disabled = !this.checked; document.getElementById('dextformat').disabled = !this.checked; document.getElementById('external').disabled = !this.checked;"> Data Extraction</li>	
 												<li><input type="checkbox" id="ptpop" name="todo" value="5">Estimate of number of patients in target population</li>	
 											</ul>
 										</div>
@@ -353,9 +354,12 @@
 											<li><input type="checkbox" id="capture1" name="capture" value="ptmc" data-grouprequired="" disabled> Patient entry through MyChart</li>
 											<li><input type="checkbox" id="capture2" name="capture" value="ptwel" disabled> Patient entry through Welcome</li>
 											<li><input type="checkbox" id="capture3" name="capture" value="ptred" disabled> Patient entry through REDCap</li>
-											<li><input type="checkbox" id="capture4" name="capture" value="clepic" disabled> Clinician entry through EPIC</li>	
-											<li><input type="checkbox" id="capture5" name="capture" value="clred" disabled> Clinician entry through REDCap</li>
-											<li><input type="checkbox" id="capture6" name="capture" value="mhigo" disabled> MHi-GO (Mobile Application)</li>	
+                                                                                        <li><input type="checkbox" id="capture4" name="capture" value="proxmc" disabled> Proxy entry through MyChart</li>
+											<li><input type="checkbox" id="capture5" name="capture" value="proxwel" disabled> Proxy entry through Welcome</li>
+											<li><input type="checkbox" id="capture6" name="capture" value="proxred" disabled> Proxy entry through REDCap</li>
+											<li><input type="checkbox" id="capture7" name="capture" value="clepic" disabled> Clinician entry through EPIC</li>	
+											<li><input type="checkbox" id="capture8" name="capture" value="clred" disabled> Clinician entry through REDCap</li>
+											<li><input type="checkbox" id="capture9" name="capture" value="mhigo" disabled> MHi-GO (Mobile Application)</li>	
 										</ul>
 									</div>
 										<div class="6u 12u(mobile)">
@@ -423,6 +427,12 @@
 										<div class="6u 12u(mobile)">
 										In what format would you like to receive your data? (Excel, pipe-delimited, CSV, SQL tables)
 											<input id="dextformat" name="subjhed" type="text" required disabled />
+										</div>
+									</div>
+                                                                        <div class="row 50%">
+										<div class="12u">
+										External Involvement -  Include information on researcher's intent to share outside of JHM. This includes corporate sponsors and multi-site studies. Also include information on what data elements are proposed to be shared and in what format (PHI, limited data set, etc)"
+											<textarea id="external" name="external" required disabled></textarea>
 										</div>
 									</div>
 								</div>								

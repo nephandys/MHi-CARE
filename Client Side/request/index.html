@@ -4,12 +4,12 @@
 		<title>MHi-REQUEST</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="../assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><script src="./assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="./assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="./assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="./assets/css/ie9.css" /><![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="../assets/js/js-webshim/minified/polyfiller.js"></script>
+		<script src="./assets/js/js-webshim/minified/polyfiller.js"></script>
 		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	
 		<script>
@@ -58,31 +58,42 @@
 			document.getElementById(it).style.display = vis;
 		}
 		</script>
-	
+                	
 		<style>
-			.model-row {
-  				display: none;
-			}
+                    input::-webkit-datetime-edit{ 
+                        color: transparent; 
+                    }
+                    
+                    input:focus::-webkit-datetime-edit{ 
+                        color: #000; 
+                    } 
+                    
+                    .model-row {
+  			display: none;
+                    }
 		
-			ul.checklist {
-				padding-left: 20px;
-				margin-bottom: 15px;
-			}		
+                    ul.checklist {
+                        padding-left: 20px;
+			margin-bottom: 15px;
+                    }		
 		
-			.quest-header {
-				font-size: 115%;
-			}
+                    .quest-header {
+			font-size: 115%;
+                    }
 		
-			div#characteristics {
-				margin-top: 0px;
-				padding-top: 0px;
-			}
+                    div#characteristics {
+			margin-top: 0px;
+			padding-top: 0px;
+                    }
 		
-			ul.list {
-				padding-left: 25px;
-			}
-				
-		</style>
+                    ul.list {
+			padding-left: 25px;
+                    }
+                    
+                    #resource-link {
+                        color: white;
+                    }
+                </style>
 	</head>
 	
 	<body class="no-sidebar">
@@ -93,27 +104,27 @@
 					<div id="header" class="container">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="../index.html">MHi-CARE</a></h1>
+							<h1 id="logo"><a href="./index.html">MHi-CARE</a></h1>
 
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li><a href="../patient.html">Patient</a></li>
-									<li><a href="../provider.html">Provider</a>
+									<li><a href="./patient.html">Patient</a></li>
+									<li><a href="./provider.html">Provider</a>
 										<ul>
 											<li><a href="#">MHi-REQUEST</a></li>
-											<li><a href="../track">MHi-TRACK</a></li>
-											<li><a href="../library">MHi-LIBRARY</a></li>
-											<li><a href="../faq">MHi-FAQ</a></li>											
+											<li><a href="./track">MHi-TRACK</a></li>
+											<li><a href="./library">MHi-LIBRARY</a></li>
+											<li><a href="./faq">MHi-FAQ</a></li>											
 										</ul>
 									</li>
-									<li class="break"><a href="../resources">Resources</a>
+									<li id="resource-link" class="break">Resources
 										<ul>
-											<li><a href="../patresource.html">Patient</a></li>
-											<li><a href="../proresource.html">Provider</a></li>										
+											<li><a href="./patresource.html">Patient</a></li>
+											<li><a href="./proresource.html">Provider</a></li>										
 										</ul>
 									</li>
-									<li><a href="../about.html">About</a></li>
+									<li><a href="./about.html">About</a></li>
 								</ul>
 							</nav>
 					</div>
@@ -130,7 +141,7 @@
 									<p>When completing the form below please be as specific as possible so that we can be of the greatest assistance.
 									We will respond to your request as quickly as we are able.</p>
 								</header>
-								<a href="#" class="image featured"><img src="../images/gradient2.png" alt="" /></a>
+								<a href="#" class="image featured"><img src="./images/gradient2.png" alt="" /></a>
 								<form class="ws-validate" id="requestform" method="post" action="mailto:jstraub2@jhmi.edu" enctype="text/plain">
 									<h3><strong>Study Team Information:</strong></h3>
 									<h3 class="quest-header"><strong>Submitter:</strong></h3>
@@ -179,24 +190,7 @@
 										</div>
 										<div class="4u 8u(mobile)">
 										Submission Date:
-											<input id="date" name="subdate" type="date" />
-											<script type="text/javascript">			
-												var today = new Date();
-												var dd = today.getDate();
-												var mm = today.getMonth()+1; //January is 0!
-												var yyyy = today.getFullYear();
-
-												if(dd<10) {
-												    dd='0'+dd
-												} 
-
-												if(mm<10) {
-												    mm='0'+mm
-												} 
-
-												today = mm+'/'+dd+'/'+yyyy;
-												document.getElementById('date').value = (today);
-											</script>
+											<input id="date" name="subdate" placeholder="mm/dd/yyyy" type="date" />
 										</div>
 									</div>
 									<br />
@@ -447,7 +441,7 @@
 								<div class="row features">
 							<section class="4u 12u(narrower) feature">
 								<div class="image-wrapper first">
-									<a href="#" class="image featured"><img src="../images/gradient.png" alt="" /></a>
+									<a href="#" class="image featured"><img src="./images/gradient.png" alt="" /></a>
 								</div>
 								<header>
 									<h3>MHi-REQUEST</h3>
@@ -460,7 +454,7 @@
 							</section>
 							<section class="4u 12u(narrower) feature">
 								<div class="image-wrapper">
-									<a href="../track" class="image featured"><img src="../images/gradient.png" alt="" /></a>
+									<a href="./track" class="image featured"><img src="./images/gradient.png" alt="" /></a>
 								</div>
 								<header>
 									<h3>MHi-TRACK</h3>
@@ -468,12 +462,12 @@
 								<p><font color="#0b5dba">Already submitted your research proposal? You can keep track your progress
 								 by following the link. Progress will be updated on a regular basis.</font></p>
 								<ul class="actions">
-									<li><a href="../track" class="button">Click Here</a></li>
+									<li><a href="./track" class="button">Click Here</a></li>
 								</ul>
 							</section>
 							<section class="4u 12u(narrower) feature">
 								<div class="image-wrapper">
-									<a href="../library" class="image featured"><img src="../images/gradient.png" alt="" /></a>
+									<a href="./library" class="image featured"><img src="./images/gradient.png" alt="" /></a>
 								</div>
 								<header>
 									<h3>MHi-LIBRARY</h3>
@@ -481,7 +475,7 @@
 								<p><font color="#0b5dba">A growing library of measures spanning function and symptom domains. Widely
 								accepted and used in clinical practice and research.</font></p>
 								<ul class="actions">
-									<li><a href="../library" class="button">Click Here</a></li>
+									<li><a href="./library" class="button">Click Here</a></li>
 								</ul>
 							</section>
 						</div>
@@ -495,7 +489,7 @@
 							<h2>Have a question? Contact us!</h2>
 							<p>For information and inquiries please use the contact form below. If you are a 
 							researcher/provider who would like to use the MHi-CARE toolset see the 
-							<em><a href="../provider.html">Provider Portal</a></em>
+							<em><a href="./provider.html">Provider Portal</a></em>
 							for resources specific to your needs.</p>
 						</header>
 						<div class="row">
@@ -539,7 +533,7 @@
 					</div>
 					<div id="copyright" class="container">
 						<ul class="menu">
-							<li><a href="http://www.hopkinsmedicine.org/psychiatry"><img src="../images/hopkins.png" /></a></li> <br/>
+							<li><a href="http://www.hopkinsmedicine.org/psychiatry"><img src="./images/hopkins.png" /></a></li> <br/>
 							<li>&copy; Untitled. All rights reserved.</li>
 						</ul>
 					</div>
@@ -548,10 +542,10 @@
 
 		<!-- Scripts -->
 
-			<script src="../assets/js/jquery.dropotron.min.js"></script>
-			<script src="../assets/js/skel.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
+			<script src="./assets/js/jquery.dropotron.min.js"></script>
+			<script src="./assets/js/skel.min.js"></script>
+			<script src="./assets/js/util.js"></script>
+			<script src="./assets/js/main.js"></script>
 			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
 			<!-- script src="../assets/js/jquery.min.js"></script> -->
 

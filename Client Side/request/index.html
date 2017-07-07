@@ -383,7 +383,7 @@
 				</div>
 				<div class="4u 8u(mobile)">
                                     <label for="sub-date">Submission Date: </label>
-                                    <input class="sub-date" name="sub-date" id="sub-date" type="date" disabled required />
+                                    <input class="sub-date" name="sub-date" id="sub-date" type="date" disabled />
 				</div>
                             </div>
                             <br />
@@ -1296,7 +1296,7 @@
                                     <ul style="margin-bottom:0;">
                                         <li><input type="checkbox" name="method" id="rec-pt" data-grouprequired="" disabled>
                                             <label for="rec-pt" style="display:inline"> Patient Notification Through MyChart </label></li>
-					<li><input type="checkbox" name="method" id="rec-stm" disabled>
+					<li><input type="checkbox" name="method" id="rec-stm" onchange="document.getElementByID('pi-contact').disabled = !this.checked; document.getElementByID('sub-contact').disabled = !this.checked;" disabled>
                                             <label for="rec-stm" style="display:inline"> Study Team Member Notification When Appropriate Patient Checks In </label></li>
 					<li><input type="checkbox" name="method" id="rec-prov" disabled>
                                             <label for="rec-prov" style="display:inline"> Provider Notification During Patient Encounter</label></li>
@@ -1315,14 +1315,14 @@
                                             <tr>
                                                 <td>PI
                                                 </td>
-                                                <td><input type="checkbox" name='con-check' id="pi-contact" data-grouprequired='' />
+                                                <td><input type="checkbox" name='con-check' id="pi-contact" data-grouprequired="" disabled />
                                                     <label for="pi-contact"></label>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>Submitter
                                                 </td>
-                                                <td><input type="checkbox" name='con-check' id="sub-contact" />
+                                                <td><input type="checkbox" name='con-check' id="sub-contact" disabled />
                                                     <label for="sub-contact"></label>
                                                 </td>
                                             </tr>

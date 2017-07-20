@@ -1396,7 +1396,7 @@
 				<center>
                                     <ul class="actions">
                                         <li><input type="submit" value="Submit Request" /></li>
-					<li><input type="reset" value="Clear form" onclick='localStorage.clear();'/></li>
+					<li><input type="reset" value="Clear form" onclick="return confirm('Are you sure you want to clear the form?')" /></li>
                                     </ul>
 				</center>
 				</div>

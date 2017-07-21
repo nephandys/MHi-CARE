@@ -129,18 +129,24 @@
 			document.getElementById(it).style.display = vis;
                     }
 		</script>
+            
                 
+            <!-- Added JS Begin -->
                 <script type="text/javascript">
-                $(document).ready(function(){
-                    $('#sub-check').change(function(){
-                        if(!this.checked)
-                    $('#submitter').fadeOut('slow');
-                        else
-                    $('#submitter').fadeIn('slow');
+                    $(document).ready(function() {
+                        $('input[type=radio][name=submitterCheck]').change(function() {
+                            if (this.value == 'submitterDifferent') {
+                                $('#submitter').fadeIn('slow');
+                            }
+                            else if (this.value == 'submitterSame') {
+                                $('#submitter').fadeOut('slow');
+                            }
+                        });
                     });
-                });
                 </script>
-                
+            <!-- Added JS End -->
+            
+            
                 <script type="text/javascript">
                 $(document).ready(function(){
                     $('#snap-check').change(function(){
@@ -403,7 +409,18 @@
 				</div>
                             </div>
                             <br />
-                            <label for="sub-check" style="display:inline">Is the person making the submission different from the PI? </label><input type="checkbox"  name="sub-check" id="sub-check" onchange="document.getElementById('sub-name').disabled = !this.checked; document.getElementById('sub-jhed').disabled = !this.checked; document.getElementById('sub-email').disabled = !this.checked;" />
+                            
+                        <!-- Added Radio Buttons Begin -->
+                            
+                            Is the person making the submission different from the PI?
+                            <input type="radio"  name="submitterCheck" id="submitterDifferent" value='submitterDifferent' onchange="document.getElementById('sub-name').disabled = !this.checked; document.getElementById('sub-jhed').disabled = !this.checked; document.getElementById('sub-email').disabled = !this.checked;" />
+                            <label for='submitterCheck' style='display:inline'> Yes </label>
+                            <input type="radio" name="submitterCheck" id="submitterSame" value='submitterSame'> 
+                            <label for='submitterDifferent' style='display:inline'> No </label>
+                            
+                        <!-- Added Radio Buttons End -->
+                            
+                            
                             <div class='hidden' id="submitter">
                             <br />
                                 <h3 class="quest-header"><strong>Submitter:</strong></h3>
@@ -462,6 +479,7 @@
 				</div>
                             </div>
                             <br />
+                            <!-- Jason Starts   -->
                             <div class="row 100%">
 				<div class="12u">
                                 <h3><strong>MHi-CARE Tools:</strong></h3>
@@ -1002,6 +1020,7 @@
                         </div> 
                         <div class="hidden" id="dex">
                         <br />
+                        <!-- Jason Ends   -->
                         <h3><strong>Data Extraction:</strong></h3>
                             Is the demographic and location information for this section the same as a section you completed earlier?
                             <input type='radio'  name='dex-same' id='dex-same' value='dex-yes' style="margin-bottom:30px" data-grouprequired='' />

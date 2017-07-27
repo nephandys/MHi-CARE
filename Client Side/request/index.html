@@ -10,8 +10,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="./assets/css/ie9.css" /><![endif]-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src="./assets/js/js-webshim/minified/polyfiller.js"></script>
-                <script src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script>
-                <script src="http://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css"></script>
+               
 		
 		<script>
                     webshim.setOptions('forms', {
@@ -223,10 +222,10 @@
                 <script type="text/javascript">
                     $(document).ready(function() {
                         $('input[type=radio][name=eDataCaptureDemoInfo]').change(function() {
-                            if (this.value == 'edc-no') {
+                            if (this.value == 'eDataCaptureDemoInfoDifferent') {
                                 $('#edc-hide').fadeIn('slow');
                             }
-                            else if (this.value == 'edc-yes') {
+                            else if (this.value == 'eDataCaptureDemoInfoSame') {
                                 $('#edc-hide').fadeOut('slow');
                             }
                         });
@@ -236,10 +235,10 @@
                 <script type="text/javascript">
                     $(document).ready(function() {
                         $('input[type=radio][name=dataExtractionDemoInfo]').change(function() {
-                            if (this.value == 'dex-no') {
+                            if (this.value == 'dataExtractionDemoInfoDifferent') {
                                 $('#dex-hide').fadeIn('slow');
                             }
-                            else if (this.value == 'dex-yes') {
+                            else if (this.value == 'dataExtractionDemoInfoSame') {
                                 $('#dex-hide').fadeOut('slow');
                             }
                         });
@@ -249,10 +248,10 @@
                 <script type="text/javascript">
                     $(document).ready(function() {
                         $('input[type=radio][name=patRecruitmentDemoInfo]').change(function() {
-                            if (this.value == 'rec-no') {
+                            if (this.value == 'patRecruitmentDemoInfoDifferent') {
                                 $('#rec-hide').fadeIn('slow');
                             }
-                            else if (this.value == 'rec-yes') {
+                            else if (this.value == 'patRecruitmentDemoInfoSame') {
                                 $('#rec-hide').fadeOut('slow');
                             }
                         });
@@ -331,6 +330,14 @@
                         padding-top:0;
                         border-top:0;
                     }
+                    
+                    .thinBlueLine {
+                        height: 5px;
+                        width: 1200px;
+                        
+                    }
+                    
+                    
                 </style>
                 
 	</head>
@@ -376,11 +383,12 @@
 
 			<!-- Content -->
                             <header>
-                                <h2>Welcome to MHi-REQUEST</h2>
+                                <h2>MHi-REQUEST</h2>
                                     <p>When completing the form below please be as specific as possible so that we can be of the greatest assistance.
-                                    We will respond to your request as quickly as we are able.</p>
+                                    We will respond to your request as quickly as we are able.
+                                    </p>
                             </header>
-                            <a href="#" class="image featured"><img src="./images/gradient2.png" alt="" /></a>
+                            
                             <form class="ws-validate" id="requestform" method="post" action="mailto:jstraub2@jhmi.edu" enctype="text/plain">
                             <h3><strong>Study Team Information:</strong></h3>
                             <h3 class="quest-header"><strong>PI:</strong></h3>
@@ -805,9 +813,9 @@
                         <div class="hidden" id="edc">
                         <h3><strong>Electronic Data Capture:</strong></h3>
                             Is the demographic and location information for this section the same as a section you completed earlier?
-                            <input type='radio'  name='eDataCaptureDemoInfo' id='eDataCaptureDemoInfoSame' value='edc-yes' style="margin-bottom:30px" data-grouprequired='' />
+                            <input type='radio'  name='eDataCaptureDemoInfo' id='eDataCaptureDemoInfoSame' value='eDataCaptureDemoInfoSame' style="margin-bottom:30px" data-grouprequired='' />
                             <label for="eDataCaptureDemoInfoSame" style="display:inline"> Yes </label>
-                            <input type='radio' name='eDataCaptureDemoInfo' id='eDataCaptureDemoInfoDifferent' value='edc-no'>
+                            <input type='radio' name='eDataCaptureDemoInfo' id='eDataCaptureDemoInfoDifferent' value='eDataCaptureDemoInfoDifferent'>
                             <label for='eDataCaptureDemoInfoDifferent' style='display:inline'> No </label>
                         <fieldset data-dependent-validation="eDataCaptureDemoInfo" id="edc-hide">
                         <h3 class="quest-header"><strong>Who composes the patient population on which you would like to capture data?</strong></h3>
@@ -982,7 +990,7 @@
                                                 <option>All</option>
                                             </select>
                                         </td>
-                                        <td>Data entered to:
+                                        <td>Data Entry Platform:
                                         <label for="eDataCapturePlatform"></label>
                                             <select class="eDataCapturePlatform stored" name='eDataCapturePlatform' id="eDataCapturePlatform" required disabled>
                                                 <option></option>
@@ -1023,9 +1031,9 @@
                         <!-- Jason Ends   -->
                         <h3><strong>Data Extraction:</strong></h3>
                             Is the demographic and location information for this section the same as a section you completed earlier?
-                            <input type='radio'  name='dataExtractionDemoInfo' id='dataExtractionDemoInfoSame' value='dex-yes' style="margin-bottom:30px" data-grouprequired='' />
+                            <input type='radio'  name='dataExtractionDemoInfo' id='dataExtractionDemoInfoSame' value='dataExtractionDemoInfoSame' style="margin-bottom:30px" data-grouprequired='' />
                             <label for="dataExtractionDemoInfo" style="display:inline"> Yes </label>
-                            <input type='radio' name='dataExtractionDemoInfo' id='dex-dif' value='dex-no'>
+                            <input type='radio' name='dataExtractionDemoInfo' id='dex-dif' value='dataExtractionDemoInfoDifferent'>
                             <label for='dex-dif' style='display:inline'> No </label>
                         <fieldset data-dependent-validation="dataExtractionDemoInfo" id="dex-hide">
                         <h3 class="quest-header"><strong>Who composes the patient population from which you would like to extract data?</strong></h3>
@@ -1201,11 +1209,11 @@
                         <br />    
                         </div>    
                         <div class="hidden" id="recruit">   
-                        <h3><strong>Recruitment:</strong></h3>
+                        <h3><strong>Patient Recruitment:</strong></h3>
                             Is the demographic and location information for this section the same as a section you completed earlier?
-                            <input type='radio'  name='patRecruitmentDemoInfo' id='patRecruitmentDemoInfoSame' value='rec-yes' style="margin-bottom:30px" data-grouprequired='' />
+                            <input type='radio'  name='patRecruitmentDemoInfo' id='patRecruitmentDemoInfoSame' value='patRecruitmentDemoInfoSame' style="margin-bottom:30px" data-grouprequired='' />
                             <label for="patRecruitmentDemoInfoSame" style="display:inline"> Yes </label>
-                            <input type='radio' name='patRecruitmentDemoInfo' id='patRecruitmentDemoInfoDifferent' value='rec-no'>
+                            <input type='radio' name='patRecruitmentDemoInfo' id='patRecruitmentDemoInfoDifferent' value='patRecruitmentDemoInfoDifferent'>
                             <label for='patRecruitmentDemoInfoDifferent' style='display:inline'> No </label>
                         <fieldset data-dependent-validation="patRecruitmentDemoInfo" id="rec-hide">
                         <h3 class="quest-header"><strong>Who composes patient population from which you would like to recruit?</strong></h3>

@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="../assets/css/main.css" />
+	<link rel="stylesheet" href="./assets/css/main.css" />
 	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     
@@ -13,6 +13,12 @@
             #resource-link {
                         color: white;
                     }
+        
+                    .profilePicture {
+                        width: 200px;
+                        height: 200px;
+                        margin-left: 50px; 
+                    }        
         </style>
     
     </head>
@@ -24,27 +30,27 @@
 		<div id="header" class="container">
 
 		<!-- Logo -->
-                    <h1 id="logo"><a href="../index.html">MHi-CARE</a></h1>
+                    <h1 id="logo"><a href="./index.html">MHi-CARE</a></h1>
 
                     <!-- Nav -->
 			<nav id="nav">
                             <ul>
-                                <li><a href="../patient.html">Patient</a></li>
-                                <li><a href="../provider.html">Provider</a>
+                                <li><a href="./patient.html">Patient</a></li>
+                                <li><a href="./provider.html">Provider</a>
                                     <ul>
-                                        <li><a href="../request">MHi-REQUEST</a></li>
-                                        <li><a href="../track">MHi-TRACK</a></li>
-                                        <li><a href="../library">MHi-LIBRARY</a></li>
-                                        <li><a href="../faq">MHi-FAQ</a></li>											
+                                        <li><a href="./request">MHi-REQUEST</a></li>
+                                        <li><a href="./track">MHi-TRACK</a></li>
+                                        <li><a href="./library">MHi-LIBRARY</a></li>
+                                        <li><a href="./faq">MHi-FAQ</a></li>											
                                     </ul>
                                 </li>
                                 <li id="resource-link" class="break">Resources
                                     <ul>
-                                        <li><a href="../resources/patresource.html">Patient</a></li>
-                                        <li><a href="../resources/proresource.html">Provider</a></li>										
+                                        <li><a href="./resources/patresource.html">Patient</a></li>
+                                        <li><a href="./resources/proresource.html">Provider</a></li>										
                                     </ul>
                                 </li>
-                                <li><a href="../about.html">About</a></li>
+                                <li><a href="./about.html">About</a></li>
                             </ul>
                         </nav>
 
@@ -60,7 +66,7 @@
 			<!-- Sidebar -->
                             <section id="sidebar">
 				<section>
-                                    <a href="#" class="image featured"><img src="../images/profile.png" alt="" /></a>
+                                   <img src="./images/profile.png" class="profilePicture" alt="" />
                                     <header>
 					<h3>USER NAME, CREDENTIALS</h3>
                                     </header>
@@ -92,7 +98,7 @@
 					<p>View the status of all of your submitted
 					projects below</p>
 				</header>
-				<a href="#" class="image featured"><img src="../images/gradient2.png" alt="" /></a>
+				<a href="#" class="image featured"><img src="./images/gradient2.png" alt="" /></a>
                                 <p>Information about how frequently table of project submissions is updated, other pertinent
                                 info about MHi-PROJECTS table.</p>
                                 
@@ -120,7 +126,7 @@
                     <div class="row features">
 			<section class="4u 12u(narrower) feature">
                             <div class="image-wrapper first">
-				<a href="#" class="image featured"><img src="../images/gradient.png" alt="" /></a>
+				<a href="#" class="image featured"><img src="./images/gradient.png" alt="" /></a>
                             </div>
                             <header>
 				<h3>MHi-REQUEST</h3>
@@ -133,7 +139,7 @@
 			</section>
 			<section class="4u 12u(narrower) feature">
                             <div class="image-wrapper">
-				<a href="#" class="image featured"><img src="../images/gradient.png" alt="" /></a>
+				<a href="#" class="image featured"><img src="./images/gradient.png" alt="" /></a>
                             </div>
                             <header>
 				<h3>MHi-TRACK</h3>
@@ -146,7 +152,7 @@
 			</section>
 			<section class="4u 12u(narrower) feature">
                             <div class="image-wrapper">
-				<a href="#" class="image featured"><img src="../images/gradient.png" alt="" /></a>
+				<a href="#" class="image featured"><img src="./images/gradient.png" alt="" /></a>
                             </div>
                             <header>
 				<h3>MHi-LIBRARY</h3>
@@ -168,7 +174,7 @@
                     <h2>Have a question? Contact us!</h2>
                     <p>For information and inquiries please use the contact form below. If you are a 
                     researcher/provider who would like to use the MHi-CARE toolset see the 
-                    <em><a href="../provider.html">Provider Portal</a></em> for resources specific to your needs.</p>
+                    <em><a href="./provider.html">Provider Portal</a></em> for resources specific to your needs.</p>
                 </header>
 		<div class="row">
                     <section class="6u 12u(narrower)">
@@ -211,7 +217,7 @@
             </div>
             <div id="copyright" class="container">
 		<ul>
-                    <li><a href="http://www.hopkinsmedicine.org/psychiatry"><img src="../images/hopkins.png" /></a></li>
+                    <li><a href="http://www.hopkinsmedicine.org/psychiatry"><img src="./images/hopkins.png" /></a></li>
                     <li>&copy; Untitled. All rights reserved.</li>
 		</ul>
             </div>
@@ -219,12 +225,12 @@
 	</div>
 		<!-- Scripts -->
                         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-			<script src="../assets/js/jquery.dropotron.min.js"></script>
-			<script src="../assets/js/skel.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
-			<!-- script src="../assets/js/jquery.min.js"></script> -->
+			<script src="./assets/js/jquery.dropotron.min.js"></script>
+			<script src="./assets/js/skel.min.js"></script>
+			<script src="./assets/js/util.js"></script>
+			<script src="./assets/js/main.js"></script>
+			<!--[if lte IE 8]><script src="./assets/js/ie/respond.min.js"></script><![endif]-->
+			<!-- script src="./assets/js/jquery.min.js"></script> -->
 
     </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-	<title>MHi-REQUEST</title>
+	<studyTitle>MHi-REQUEST</studyTitle>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lte IE 8]><script src="./assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -10,6 +10,7 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="./assets/css/ie9.css" /><![endif]-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="./assets/js/js-webshim/minified/polyfiller.js"></script>
+
 	<script>
             webshim.setOptions('forms', {
                 lazyCustomMessages: true,
@@ -26,11 +27,13 @@
             webshim.polyfill('forms forms-ext');
                     
             $(function(){
-                $('[type="date"].sub-date').prop('defaultValue', function(){
+                $('[type="date"].submissionDate').prop('defaultValue', function(){
                     return new Date().toJSON().split('T')[0];
                 });
             });
         </script>
+                
+        
 
         <style>
             .qmark {
@@ -57,7 +60,15 @@
             .quest-header {
                 font-size: 125%;
             }
-              
+                      
+            ul {
+                padding-left: 20px;
+            }
+                    
+            .descriptor {
+                padding-left: 25px;
+            }
+                
             #contact-table {
                 margin-bottom:0;
             }
@@ -66,11 +77,7 @@
                 margin-bottom:0;
                 padding-top:0;
                 border-top:0;
-            }
-                      
-            ul {
-                padding-left: 20px;
-            }    
+            }   
         </style>     
     </head>
 	
@@ -205,22 +212,22 @@
                                 <textarea  name="projectDescription" id="projectDescription" required></textarea>
                             </div>
                         </div>
-                        <br /
+                        <br />
                         <div class="row 100%">
                             <div class="12u">
                                 <h3><strong>MHi-CARE Tools:</strong></h3>
                                 <h3 class="quest-header"><strong>Which of the following would you like to do with your specified patient population? Check all that apply</strong></h3>
                                 <ul class="list">
                                     <li><input type="checkbox" class="box" id="patStudyEstimateCheck" name="toolset" onchange="document.getElementById('patStudyEstimateAge').disabled = !this.checked; document.getElementById('patStudyEstimateSexMale').disabled = !this.checked; document.getElementById('patStudyEstimateSexFemale').disabled = !this.checked; document.getElementById('patStudyEstimateSexNonBinary').disabled = !this.checked; document.getElementById('patStudyEstimateSexAll').disabled = !this.checked; document.getElementById('patStudyEstimateGenderCisMan').disabled = !this.checked; document.getElementById('patStudyEstimateGenderCisWoman').disabled = !this.checked; document.getElementById('patStudyEstimateGenderTransMan').disabled = !this.checked; document.getElementById('patStudyEstimateGenderTransWoman').disabled = !this.checked; document.getElementById('patStudyEstimateGenderOther').disabled = !this.checked; document.getElementById('patStudyEstimateGenderAll').disabled = !this.checked; document.getElementById('patStudyEstimateRaceAsian').disabled = !this.checked; document.getElementById('patStudyEstimateRaceNativeAmerican').disabled = !this.checked; document.getElementById('patStudyEstimateRaceWhite').disabled = !this.checked; document.getElementById('patStudyEstimateRaceBlack').disabled = !this.checked; document.getElementById('patStudyEstimateRaceHawaiiPacificIslander').disabled = !this.checked; document.getElementById('patStudyEstimateRaceOther').disabled = !this.checked; document.getElementById('patStudyEstimateRaceAll').disabled = !this.checked; document.getElementById('patStudyEstimateEthnicityLatino').disabled = !this.checked; document.getElementById('patStudyEstimateEthnicityNonLatino').disabled = !this.checked; document.getElementById('patStudyEstimateEthnicityOther').disabled = !this.checked; document.getElementById('patStudyEstimateEthnicityAll').disabled = !this.checked; document.getElementById('patStudyEstimateInclusion').disabled = !this.checked; document.getElementById('patStudyEstimateExclusion').disabled = !this.checked; document.getElementById('patStudyEstimateLocationJHH').disabled = !this.checked; document.getElementById('patStudyEstimateLocationJHBMC').disabled = !this.checked; document.getElementById('patStudyEstimateLocationAll').disabled = !this.checked; document.getElementById('patStudyEstimateLocationOther').disabled = !this.checked; document.getElementById('patStudyEstimateLevelOfCareOutpatient').disabled = !this.checked; document.getElementById('patStudyEstimateLevelOfCareCaseManagement').disabled = !this.checked; document.getElementById('patStudyEstimateLevelOfCarePRP').disabled = !this.checked; document.getElementById('patStudyEstimateLevelOfCareSchool').disabled = !this.checked; document.getElementById('patStudyEstimateLevelOfCareMobile').disabled = !this.checked; document.getElementById('patStudyEstimateLevelOfCareDayHospital').disabled = !this.checked; document.getElementById('patStudyEstimateLevelOfCareInpatient').disabled = !this.checked; document.getElementById('patStudyEstimateLevelOfCareOther').disabled = !this.checked; document.getElementById('patStudyEstimateLevelOfCareAll').disabled = !this.checked; document.getElementById('patStudyEstimateLocation').disabled = !this.checked;" data-grouprequired="">
-                                        <label class="tool-head" for="patStudyEstimateCheck" style="display:inline"> Patient estimate for study design </label><img class="qmark" id="ss-help" src="./images/qmark-icon.png" alt="" title="Obtain an estimate of the number of patients in a specified population" /></li>
+                                        <label class="tool-head" for="patStudyEstimateCheck" style="display:inline"> Patient estimate for study design </label><img class="qmark" id="ss-help" src="./images/qmark-icon.png" alt="" studyTitle="Obtain an estimate of the number of patients in a specified population" /></li>
                                     <li><input type="checkbox" class="box" id="patRegistryCheck" name="toolset" onchange="document.getElementById('patRegistryAge').disabled = !this.checked; document.getElementById('patRegistrySexMale').disabled = !this.checked; document.getElementById('patRegistrySexFemale').disabled = !this.checked; document.getElementById('patRegistrySexNonBinary').disabled = !this.checked; document.getElementById('patRegistrySexAll').disabled = !this.checked; document.getElementById('patRegistryGenderCisMan').disabled = !this.checked; document.getElementById('patRegistryGenderCisWoman').disabled = !this.checked; document.getElementById('patRegistryGenderTransMan').disabled = !this.checked; document.getElementById('patRegistryGenderTransWoman').disabled = !this.checked; document.getElementById('patRegistryGenderOther').disabled = !this.checked; document.getElementById('patRegistryGenderAll').disabled = !this.checked; document.getElementById('patRegistryRaceAsian').disabled = !this.checked; document.getElementById('patRegistryRaceNativeAmerican').disabled = !this.checked; document.getElementById('patRegistryRaceWhite').disabled = !this.checked; document.getElementById('patRegistryRaceBlack').disabled = !this.checked; document.getElementById('patRegistryRaceHawaiiPacificIslander').disabled = !this.checked; document.getElementById('patRegistryRaceOther').disabled = !this.checked; document.getElementById('patRegistryRaceAll').disabled = !this.checked; document.getElementById('patRegistryEthnicityLatino').disabled = !this.checked; document.getElementById('patRegistryEthnicityNonLatino').disabled = !this.checked; document.getElementById('patRegistryEthnicityOther').disabled = !this.checked; document.getElementById('patRegistryEthnicityAll').disabled = !this.checked; document.getElementById('patRegistryInclusion').disabled = !this.checked; document.getElementById('patRegistryExclusion').disabled = !this.checked; document.getElementById('patRegistryLocationJHH').disabled = !this.checked; document.getElementById('patRegistryLocationJHBMC').disabled = !this.checked; document.getElementById('patRegistryLocationAll').disabled = !this.checked; document.getElementById('patRegistryLocationOther').disabled = !this.checked; document.getElementById('patRegistryLevelOfCareOutpatient').disabled = !this.checked; document.getElementById('patRegistryLevelOfCarePRP').disabled = !this.checked; document.getElementById('patRegistryLevelOfCareCaseManagement').disabled = !this.checked; document.getElementById('patRegistryLevelOfCareSchool').disabled = !this.checked; document.getElementById('patRegistryLevelOfCareMobile').disabled = !this.checked; document.getElementById('patRegistryLevelOfCareDayHospital').disabled = !this.checked; document.getElementById('patRegistryLevelOfCareInpatient').disabled = !this.checked; document.getElementById('patRegistryLevelOfCareOther').disabled = !this.checked; document.getElementById('patRegistryLevelOfCareAll').disabled = !this.checked; document.getElementById('patRegistryLocationInfo').disabled = !this.checked; document.getElementById('patRegistryMetricDiagnoses').disabled = !this.checked; document.getElementById('patRegistryMetricMeds').disabled = !this.checked; document.getElementById('patRegistryMetricLabs').disabled = !this.checked; document.getElementById('patRegistryMetricMeasures').disabled = !this.checked; document.getElementById('patRegistryOtherMetric').disabled = !this.checked;" data-grouprequired="">
-                                        <label class="tool-head" for="patRegistryCheck" style="display:inline"> Patient registry </label><img class="qmark" src="./images/qmark-icon.png" alt="" title="Track information on patients over time" /></li>
+                                        <label class="tool-head" for="patRegistryCheck" style="display:inline"> Patient registry </label><img class="qmark" src="./images/qmark-icon.png" alt="" studyTitle="Track information on patients over time" /></li>
                                     <li><input type="checkbox" class="box" id="electronicDataCaptureCheck" name="toolset" onchange="document.getElementById('eDataCaptureAge').disabled = !this.checked; document.getElementById('eDataCaptureSexMale').disabled = !this.checked; document.getElementById('eDataCaptureSexFemale').disabled = !this.checked; document.getElementById('eDataCaptureSexNonBinary').disabled = !this.checked; document.getElementById('eDataCaptureSexAll').disabled = !this.checked; document.getElementById('eDataCaptureGenderCisMan').disabled = !this.checked; document.getElementById('eDataCaptureGenderCisWoman').disabled = !this.checked; document.getElementById('eDataCaptureGenderTransMan').disabled = !this.checked; document.getElementById('eDataCaptureGenderTransWoman').disabled = !this.checked; document.getElementById('eDataCaptureGenderOther').disabled = !this.checked; document.getElementById('eDataCaptureGenderAll').disabled = !this.checked; document.getElementById('eDataCaptureRaceAsian').disabled = !this.checked; document.getElementById('eDataCaptureRaceNativeAmerican').disabled = !this.checked; document.getElementById('eDataCaptureRaceWhite').disabled = !this.checked; document.getElementById('eDataCaptureRaceBlack').disabled = !this.checked; document.getElementById('eDataCaptureRaceHawaiiPacificIslander').disabled = !this.checked; document.getElementById('eDataCaptureRaceOther').disabled = !this.checked; document.getElementById('eDataCaptureRaceAll').disabled = !this.checked; document.getElementById('eDataCaptureEthnicityLatino').disabled = !this.checked; document.getElementById('eDataCaptureEthnicityNonLatino').disabled = !this.checked; document.getElementById('eDataCaptureEthnicityOther').disabled = !this.checked; document.getElementById('eDataCaptureEthnicityAll').disabled = !this.checked; document.getElementById('eDataCaptureInclusion').disabled = !this.checked; document.getElementById('eDataCaptureExclusion').disabled = !this.checked; document.getElementById('eDataCaptureLocationJHH').disabled = !this.checked; document.getElementById('eDataCaptureLocationJHBMC').disabled = !this.checked; document.getElementById('eDataCaptureLocation-both').disabled = !this.checked; document.getElementById('eDataCaptureLocationOther').disabled = !this.checked; document.getElementById('eDataCaptureLevelOfCareOutpatient').disabled = !this.checked; document.getElementById('eDataCaptureLevelOfCarePRP').disabled = !this.checked; document.getElementById('eDataCaptureLevelOfCareSchool').disabled = !this.checked; document.getElementById('eDataCaptureLevelOfCareMobile').disabled = !this.checked; document.getElementById('eDataCaptureLevelOfCareCaseManagement').disabled = !this.checked; document.getElementById('eDataCaptureLevelOfCareDayHospital').disabled = !this.checked; document.getElementById('eDataCaptureLevelOfCareInpatient').disabled = !this.checked; document.getElementById('eDataCaptureLevelOfCareOther').disabled = !this.checked; document.getElementById('eDataCaptureLevelOfCareAll').disabled = !this.checked; document.getElementById('eDataCaptureLocationInfo').disabled = !this.checked; document.getElementById('eDataCaptureStartDate').disabled = !this.checked; document.getElementById('eDataCaptureFrequency').disabled = !this.checked; document.getElementById('eDataCaptureLength').disabled = !this.checked; document.getElementById('eDataCaptureInfoToCapture').disabled = !this.checked; document.getElementById('eDataCaptureEntrantOfData').disabled = !this.checked; document.getElementById('eDataCapturePlatform').disabled = !this.checked; document.getElementById('eDataCaptureVisualize').disabled = !this.checked; document.getElementById('eDataCaptureDoNotVisualize').disabled = !this.checked;" data-grouprequired="">
-                                        <label class="tool-head" for="electronicDataCaptureCheck" style="display:inline"> Electronic data capture </label><img class="qmark" src="./images/qmark-icon.png" alt="" title="Build tools within and alongside the EMR to capture patient data" /></li>
+                                        <label class="tool-head" for="electronicDataCaptureCheck" style="display:inline"> Electronic data capture </label><img class="qmark" src="./images/qmark-icon.png" alt="" studyTitle="Build tools within and alongside the EMR to capture patient data" /></li>
                                     <li><input type="checkbox" class="box" id="dataExtractionCheck" name="toolset" onchange="document.getElementById('dataExtractionAge').disabled = !this.checked; document.getElementById('dataExtractionSexMale').disabled = !this.checked; document.getElementById('dataExtractionSexFemale').disabled = !this.checked; document.getElementById('dataExtractionSexNonBinary').disabled = !this.checked; document.getElementById('dataExtractionSexAll').disabled = !this.checked; document.getElementById('dataExtractionGenderCisMan').disabled = !this.checked; document.getElementById('dataExtractionGenderCisWoman').disabled = !this.checked; document.getElementById('dataExtractionGenderTransMan').disabled = !this.checked; document.getElementById('dataExtractionGenderTransWoman').disabled = !this.checked; document.getElementById('dataExtractionGenderOther').disabled = !this.checked; document.getElementById('dataExtractionGenderAll').disabled = !this.checked; document.getElementById('dataExtractionRaceAsian').disabled = !this.checked; document.getElementById('dataExtractionRaceNativeAmerican').disabled = !this.checked; document.getElementById('dataExtractionRaceWhite').disabled = !this.checked; document.getElementById('dataExtractionRaceBlack').disabled = !this.checked; document.getElementById('dataExtractionRaceHawaiiPacificIslander').disabled = !this.checked; document.getElementById('dataExtractionRaceOther').disabled = !this.checked; document.getElementById('dataExtractionRaceAll').disabled = !this.checked; document.getElementById('dataExtractionEthnicityLatino').disabled = !this.checked; document.getElementById('dataExtractionEthnicityNonLatino').disabled = !this.checked; document.getElementById('dataExtractionEthnicityOther').disabled = !this.checked; document.getElementById('dataExtractionEthnicityAll').disabled = !this.checked; document.getElementById('dataExtractionInclusion').disabled = !this.checked; document.getElementById('dataExtractionExclusion').disabled = !this.checked; document.getElementById('dataExtractionLocationJHH').disabled = !this.checked; document.getElementById('dataExtractionLocationJHBMC').disabled = !this.checked; document.getElementById('dataExtractionLocationAll').disabled = !this.checked; document.getElementById('dataExtractionLocationOther').disabled = !this.checked; document.getElementById('dataExtractionLevelOfCareOutpatient').disabled = !this.checked; document.getElementById('dataExtractionLevelOfCarePRP').disabled = !this.checked; document.getElementById('dataExtractionLevelOfCareCaseManagement').disabled = !this.checked; document.getElementById('dataExtractionLevelOfCareSchool').disabled = !this.checked; document.getElementById('dataExtractionLevelOfCareMobile').disabled = !this.checked; document.getElementById('dataExtractionLevelOfCareDayHospital').disabled = !this.checked; document.getElementById('dataExtractionLevelOfCareInpatient').disabled = !this.checked; document.getElementById('dataExtractionLevelOfCareOther').disabled = !this.checked; document.getElementById('dataExtractionLevelOfCareAll').disabled = !this.checked; document.getElementById('dataExtractionLocationInfo').disabled = !this.checked; document.getElementById('dataExtractionStartDate').disabled = !this.checked; document.getElementById('dataExtractionFrequency').disabled = !this.checked; document.getElementById('dataExtractionEndDate').disabled = !this.checked; document.getElementById('dataExtractionWhatDataToExtract').disabled = !this.checked; document.getElementById('dataExtractionDeliveryLocation').disabled = !this.checked; document.getElementById('dataExtractionDataFormat').disabled = !this.checked; document.getElementById('dataExtractionExternalCollaboration').disabled = !this.checked;" data-grouprequired="">
-                                        <label class="tool-head" for="dataExtractionCheck" style="display:inline"> Data extraction </label><img class="qmark" src="./images/qmark-icon.png" alt="" title="Identify a patient population and extract specified data from the EMR"/></li>
+                                        <label class="tool-head" for="dataExtractionCheck" style="display:inline"> Data extraction </label><img class="qmark" src="./images/qmark-icon.png" alt="" studyTitle="Identify a patient population and extract specified data from the EMR"/></li>
                                     <li><input type="checkbox" class="box" id="patRecruitmentCheck" name="toolset" onchange="document.getElementById('patRecruitmentAge').disabled = !this.checked; document.getElementById('patRecruitmentSexMale').disabled = !this.checked; document.getElementById('patRecruitmentSexFemale').disabled = !this.checked; document.getElementById('patRecruitmentSexNonBinary').disabled = !this.checked; document.getElementById('patRecruitmentSexAll').disabled = !this.checked; document.getElementById('patRecruitmentGenderCisMan').disabled = !this.checked; document.getElementById('patRecruitmentGenderCisWoman').disabled = !this.checked; document.getElementById('patRecruitmentGenderTransMan').disabled = !this.checked; document.getElementById('patRecruitmentGenderTransWoman').disabled = !this.checked; document.getElementById('patRecruitmentGenderOther').disabled = !this.checked; document.getElementById('patRecruitmentGenderAll').disabled = !this.checked; document.getElementById('patRecruitmentRaceAsian').disabled = !this.checked; document.getElementById('patRecruitmentRaceNativeAmerican').disabled = !this.checked; document.getElementById('patRecruitmentRaceWhite').disabled = !this.checked; document.getElementById('patRecruitmentRaceBlack').disabled = !this.checked; document.getElementById('patRecruitmentRaceHawaiiPacificIslander').disabled = !this.checked; document.getElementById('patRecruitmentRaceOther').disabled = !this.checked; document.getElementById('patRecruitmentRaceAll').disabled = !this.checked; document.getElementById('patRecruitmentEthnicityLatino').disabled = !this.checked; document.getElementById('patRecruitmentEthnicityNonLatino').disabled = !this.checked; document.getElementById('patRecruitmentEthnicityOther').disabled = !this.checked; document.getElementById('patRecruitmentEthnicityAll').disabled = !this.checked; document.getElementById('patRecruitmentInclusion').disabled = !this.checked; document.getElementById('patRecruitmentExclusion').disabled = !this.checked; document.getElementById('patRecruitmentLocationJHH').disabled = !this.checked; document.getElementById('patRecruitmentLocationJHBMC').disabled = !this.checked; document.getElementById('patRecruitmentLocationAll').disabled = !this.checked; document.getElementById('patRecruitmentLocationOther').disabled = !this.checked; document.getElementById('patRecruitmentLevelOfCareOutpatient').disabled = !this.checked; document.getElementById('patRecruitmentLevelOfCarePRP').disabled = !this.checked; document.getElementById('patRecruitmentLevelOfCareSchool').disabled = !this.checked; document.getElementById('patRecruitmentLevelOfCareCaseManagement').disabled = !this.checked; document.getElementById('patRecruitmentLevelOfCareMobile').disabled = !this.checked; document.getElementById('patRecruitmentLevelOfCareDayHospital').disabled = !this.checked; document.getElementById('patRecruitmentLevelOfCareInpatient').disabled = !this.checked; document.getElementById('patRecruitmentLevelOfCareOther').disabled = !this.checked; document.getElementById('patRecruitmentLevelOfCareAll').disabled = !this.checked; document.getElementById('patRecruitmentLocationInfo').disabled = !this.checked; document.getElementById('patRecruitmentStartDate').disabled = !this.checked; document.getElementById('patRecruitmentLength').disabled = !this.checked; document.getElementById('patRecruitmentContactPatient').disabled = !this.checked; document.getElementById('patRecruitmentContactStudyTeam').disabled = !this.checked; document.getElementById('patRecruitmentContactProvider').disabled = !this.checked; document.getElementById('patRecruitmentContactPI').disabled = !this.checked; document.getElementById('patRecruitmentContactSubmitter').disabled = !this.checked;" data-grouprequired="">
-                                        <label class="tool-head" for="patRecruitmentCheck" style="display:inline"> Recruitment for research </label><img class="qmark" src="./images/qmark-icon.png" alt="" title="Utilize the EMR to recruit patients that meet specified criteria for your study" /></li>
+                                        <label class="tool-head" for="patRecruitmentCheck" style="display:inline"> Recruitment for research </label><img class="qmark" src="./images/qmark-icon.png" alt="" studyTitle="Utilize the EMR to recruit patients that meet specified criteria for your study" /></li>
                                 </ul>
                             </div>
                         </div>
@@ -1166,8 +1173,8 @@
                             <header>
                                 <h3>MHi-ACCOUNT</h3>
                             </header>
-                            <p class="blueText">Already submitted your research proposal? You can keep track your progress
-                                by checking your account. Progress will be updated regularly.</p>
+                            <p><font color="#0b5dba">Already submitted your research proposal? You can keep track your progress
+                                by checking your account. Progress will be updated regularly.</font></p>
                                 <ul class="actions">
                                     <li><a href="#" class="button">Click Here</a></li>
 				</ul>
@@ -1179,8 +1186,8 @@
                             <header>
                                 <h3>MHi-LIBRARY</h3>
                             </header>
-                            <p class="blueText">A growing library of measures spanning function and symptom domains. Widely
-                                accepted and used in clinical practice and research.</p>
+                            <p><font color="#0b5dba">A growing library of measures spanning function and symptom domains. Widely
+                                accepted and used in clinical practice and research.</font></p>
                                 <ul class="actions">
                                     <li><a href="#" class="button">Click Here</a></li>
                                 </ul>
@@ -1192,8 +1199,8 @@
                             <header>
                                 <h3>MHi-RESOURCES</h3>
                             </header>
-                            <p class="blueText">Would you like more information about MHi-CARE? Are you interested
-                                in finding out how to make use of MHi-CARE in your clinical practice?</p>
+                            <p><font color="#0b5dba">Would you like more information about MHi-CARE? Are you interested
+                                in finding out how to make use of MHi-CARE in your clinical practice?</font></p>
                                 <ul class="actions">
                                     <li><a href="./library" class="button">Click Here</a></li>
 				</ul>
@@ -1253,7 +1260,7 @@
                 <div id="copyright" class="container">
                     <ul>
                         <li><a href="http://www.hopkinsmedicine.org/psychiatry"><img src="./images/hopkins.png" /></a></li>
-                        <li>&copy; Untitled. All rights reserved.</li>
+                        <li>&copy; UnstudyTitled. All rights reserved.</li>
                     </ul>
                 </div>
             </div>
@@ -1266,8 +1273,7 @@
 	<script src="./assets/js/main.js"></script>
 	<!--[if lte IE 8]><script src="./assets/js/ie/respond.min.js"></script><![endif]-->
 	<!-- script src="./assets/js/jquery.min.js"></script> -->
-        <script type="text/javascript">
-        // Study Team Members Table - Add/Remove Rows
+        <script>
             function addTableRow() {
                 var $tableRow = $('tr.model-row:first-child');
                 var $clonedRow = $tableRow.clone().show();
@@ -1294,8 +1300,9 @@
                     addTableRow();
                 });
             });
-            
-        // Electronic Data Capture Entrant/Platform Table - Add/Remove Rows
+        </script>
+               
+        <script type="text/javascript">
             function addEDCTableRow() {
                 var $tableRow = $('tr.edc-row:first-child');
                 var $clonedRow = $tableRow.clone().show();
@@ -1322,8 +1329,9 @@
                     addEDCTableRow();
                 });
             });
-         
-        // Contact Study Team Member Table - Add/Remove Rows
+        </script>
+                
+        <script type="text/javascript">
             function addConTableRow() {
                 var $tableRow = $('tr.contact-row:first-child');
                 var $clonedRow = $tableRow.clone().show();
@@ -1350,14 +1358,16 @@
                     addConTableRow();
                 });
             });
-        
-        // Show Hidden Div 
+        </script>
+	
+        <script type="text/javascript">
             function showMe (it, box) {
                 var vis = (box.checked) ? "block" : "none";
                 document.getElementById(it).style.display = vis;
             }
-        
-        // Submitter Info - Fade In/Out 
+        </script>
+            
+        <script type="text/javascript">
             $(document).ready(function() {
                 $('input[type=radio][name=submitterCheck]').change(function() {
                     if (this.value == 'submitterDifferent') {
@@ -1368,8 +1378,9 @@
                     }
                 });
             });
+        </script>
             
-        // Patient Study Estimate - Fade In/Out 
+        <script type="text/javascript">
             $(document).ready(function(){
                 $('#patStudyEstimateCheck').change(function(){
                     if(!this.checked)
@@ -1378,8 +1389,9 @@
                 $('#snapshot').fadeIn('slow');
                 });
             });
-       
-        // Patient Registry - Fade In/Out
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function(){
                 $('#patRegistryCheck').change(function(){
                     if(!this.checked)
@@ -1388,8 +1400,9 @@
                 $('#registry').fadeIn('slow');
                 });
             });
-          
-        // Electronic Data Capture - Fade In/Out 
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function(){
                 $('#electronicDataCaptureCheck').change(function(){
                     if(!this.checked)
@@ -1399,8 +1412,9 @@
 
                 });
             });
-           
-        // Data Extraction - Fade In/Out
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function(){
                 $('#dataExtractionCheck').change(function(){
                     if(!this.checked)
@@ -1409,8 +1423,9 @@
                 $('#dex').fadeIn('slow');
                 });
             });
-       
-        // Patient Recruitment - Fade In/Out 
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function(){
                 $('#patRecruitmentCheck').change(function(){
                     if(!this.checked)
@@ -1419,8 +1434,9 @@
                 $('#recruit').fadeIn('slow');
                 });
             });
-      
-        // Patient Registry Demographic Info - Fade In/Out
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function() {
                 $('input[type=radio][name=patRegistryDemoInfo]').change(function() {
                     if (this.value == 'patRegistryDemoInfoDifferent') {
@@ -1431,8 +1447,9 @@
                     }
                 });
             });
-             
-        // Electronic Data Capture Demographic Info - Fade In/Out
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function() {
                 $('input[type=radio][name=eDataCaptureDemoInfo]').change(function() {
                     if (this.value == 'eDataCaptureDemoInfoDifferent') {
@@ -1443,8 +1460,9 @@
                     }
                 });
             });
-         
-        // Data Extraction Demographic Info - Fade In/Out
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function() {
                 $('input[type=radio][name=dataExtractionDemoInfo]').change(function() {
                     if (this.value == 'dataExtractionDemoInfoDifferent') {
@@ -1455,8 +1473,9 @@
                     }
                 });
             });
-            
-        // Patient Recruitment Demographic Info - Fade In/Out 
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function() {
                 $('input[type=radio][name=patRecruitmentDemoInfo]').change(function() {
                     if (this.value == 'patRecruitmentDemoInfoDifferent') {
@@ -1467,8 +1486,9 @@
                     }
                 });
             });
-           
-        // Contact Member of Study Team - Fade In/Out - Who to Contact? 
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function(){
                 $('#patRecruitmentContactStudyTeam').change(function(){
                     if(!this.checked)
@@ -1477,8 +1497,9 @@
                 $('#contact').fadeIn('slow');
                 });
             });
-          
-        // How Would You Like Your Data to be Visualized - Fade In/Out
+        </script>
+                
+        <script type="text/javascript">
             $(document).ready(function() {
                 $('input[type=radio][name=eDataCaptureVisualize]').change(function() {
                     if (this.value == 'visual-yes') {

@@ -11,31 +11,27 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         
         <style>
-            .image-wrapper {
-                z-index:0;
-            }
-             /* Slideshow and Modals - MHi-REQUEST */
-            div#mhiResourcesSlideShow img.use-case {
+            .use-case {
                 cursor:pointer;
                 height: 500px;
                 width: 100%;
             }
                 
-            div#mhiResourcesSlideShow * {box-sizing:border-box}
+            * {box-sizing:border-box}
 
             /* Slideshow container */
-            div#mhiResourcesSlideShow div.slideshow-container {
+            .slideshow-container {
                 max-width: 1000px;
                 position: relative;
                 margin: auto;
             }
 
-            div#mhiResourcesSlideShow div.mySlides {
+            .mySlides {
                 display: none;
             }
 
             /* Next & previous buttons */
-            div#mhiResourcesSlideShow div.resourcesSlideShowPrevNext a.prev, a.next {
+            .prev, .next {
                 cursor: pointer;
                 position: absolute;
                 top: 50%;
@@ -51,18 +47,18 @@
             }
 
             /* Position the "next button" to the right */
-            div#mhiResourcesSlideShow div.resourcesSlideShowPrevNext a.next {
+            .next {
                 right: 0;
                 border-radius: 5px;
             }
 
             /* On hover, add a black background color with a little bit see-through */
-            div#mhiResourcesSlideShow div.resourcesSlideShowPrevNext a.prev:hover, a.next:hover {
+            .prev:hover, .next:hover {
                 background-color: #D8E0FB;
             }
                 
             /* The dots/bullets/indicators */
-            div#mhiResourcesSlideShow div.slideShowDots .dot {
+            .dot {
                 cursor:pointer;
                 height: 13px;
                 width: 13px;
@@ -73,12 +69,12 @@
                 transition: background-color 0.6s ease;
             }
 
-            div#mhiResourcesSlideShow div.slideShowDots .dot:hover {
+            .dot:hover {
                 background-color: #717171;
             }
 
             /* Fading animation */
-            div#mhiResourcesSlideShow div.fade {
+            .fade {
                 -webkit-animation-name: fade;
                 -webkit-animation-duration: 1.5s;
                 animation-name: fade;
@@ -96,7 +92,7 @@
             }
             
             /* The Modal (background) */
-            div#mhiResourcesSlideShow div.modal {
+            .modal {
                 display: none; /* Hidden by default */
                 position: fixed; /* Stay in place */
                 z-index: 1; /* Sit on top */
@@ -111,7 +107,7 @@
             }
 
             /* Modal Content (image) */
-            div#mhiResourcesSlideShow img.modal-content {
+            .modal-content {
                 margin: auto;
                 display: block;
                 width: 90%;
@@ -119,7 +115,7 @@
             }
 
             /* Caption of Modal Image */
-            div#mhiResourcesSlideShow div.modal div#caption {
+            #caption {
                 margin: auto;
                 display: block;
                 width: 80%;
@@ -131,7 +127,7 @@
             }
 
             /* Add Animation */
-            div#mhiResourcesSlideShow div.modal-content, div.modal div#caption {    
+            .modal-content, #caption {    
                 -webkit-animation-name: zoom;
                 -webkit-animation-duration: 0.6s;
                 animation-name: zoom;
@@ -149,7 +145,7 @@
             }
 
             /* The Close Button */
-            div#mhiResourcesSlideShow div.modal .close {
+            .close {
                 position: absolute;
                 top: 15px;
                 right: 35px;
@@ -159,8 +155,8 @@
                 transition: 0.3s;
             }
 
-            div#mhiResourcesSlideShow div.modal .close:hover,
-            div#mhiResourcesSlideShow div.modal .close:focus {
+            .close:hover,
+            .close:focus {
                 color: #bbb;
                 text-decoration: none;
                 cursor: pointer;
@@ -168,10 +164,10 @@
 
             /* 100% Image Width on Smaller Screens */
             @media only screen and (max-width: 700px){
-                div#mhiResourcesSlideShow img.modal-content {
+                .modal-content {
                     width: 100%;
                 }
-            }
+            }   
         </style> 
     </head>
     <body class="no-sidebar">
@@ -214,7 +210,6 @@
                             and resources regarding the MHi-CARE initiative.</p>
                     </header>	
                     <h3><em>MHi-CARE Toolset Use Case Diagrams</em></h3>
-                    <div id="mhiResourcesSlideShow">
                     <div class="slideshow-container">
                         <div class="mySlides fade">
                             <img class='use-case' id="ss-use" src="./images/ss-use.png">
@@ -281,24 +276,161 @@
                             <!-- Modal Caption (Image Text) -->
                             <div id="caption"></div>
                         </div>
-                        <div class="resourcesSlideShowPrevNext">
                         <a class="prev" id="prev" onclick="plusSlides(-1)">&#10094;</a>
                         <a class="next" id="next" onclick="plusSlides(1)">&#10095;</a>
-                        </div>
                     </div>
                     <br />
-                    <div class="slideShowDots" style="text-align:center">
+                    <div style="text-align:center">
                         <span class="dot" onclick="currentSlide(1)"></span> 
                         <span class="dot" onclick="currentSlide(2)"></span> 
                         <span class="dot" onclick="currentSlide(3)"></span>
                         <span class="dot" onclick="currentSlide(4)"></span> 
                         <span class="dot" onclick="currentSlide(5)"></span> 
                     </div>
-                    
-                </div>
-                    
                     <br />
-                    
+                    <script type="text/javascript">
+                        // Get the modal
+                        var modal = document.getElementById('ssModal');
+
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('ss-use');
+                        var modalImg = document.getElementById("img01");
+                        var captionText = document.getElementById("caption");
+                        img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }   
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() { 
+                            modal.style.display = "none";
+                        };
+                    </script>
+                        
+                    <script type="text/javascript">
+                        // Get the modal
+                        var modal = document.getElementById('regModal');
+
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('reg-use');
+                        var modalImg = document.getElementById("img02");
+                        var captionText = document.getElementById("caption");
+                        img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() { 
+                            modal.style.display = "none";
+                        };
+                    </script>
+                        
+                    <script type="text/javascript">
+                        // Get the modal
+                        var modal = document.getElementById('edcModal');
+
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('edc-use');
+                        var modalImg = document.getElementById("img03");
+                        var captionText = document.getElementById("caption");
+                        img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() { 
+                            modal.style.display = "none";
+                        }
+                    </script>
+                        
+                    <script type="text/javascript">
+                        // Get the modal
+                        var modal = document.getElementById('dexModal');
+
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('dex-use');
+                        var modalImg = document.getElementById("img04");
+                        var captionText = document.getElementById("caption");
+                        img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() { 
+                            modal.style.display = "none";
+                        }
+                    </script>
+                        
+                    <script type="text/javascript">
+                        // Get the modal
+                        var modal = document.getElementById('recModal');
+
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('rec-use');
+                        var modalImg = document.getElementById("img05");
+                        var captionText = document.getElementById("caption");
+                        img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() { 
+                            modal.style.display = "none";
+                        }
+                    </script>
+                        
+                    <script>
+                        var slideIndex = 1;
+                            showSlides(slideIndex);
+
+                        function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                        }
+
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+
+                        function showSlides(n) {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            var dots = document.getElementsByClassName("dot");
+                            if (n > slides.length) {slideIndex = 1} 
+                            if (n < 1) {slideIndex = slides.length}
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none"; 
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            slides[slideIndex-1].style.display = "block"; 
+                            dots[slideIndex-1].className += " active";
+                        }
+                    </script>
                     
                     <div class="row features">
                         <section class="4u 12u(narrower) feature">
@@ -308,8 +440,8 @@
                             <header>
                                 <h3>MHi-ACCOUNT</h3>
                             </header>
-                            <p class="blueText">Already submitted your research proposal? You can keep track your progress
-                                by checking your account. Progress will be updated regularly.</p>
+                            <p><font color="#0b5dba">Already submitted your research proposal? You can keep track your progress
+                                by checking your account. Progress will be updated regularly.</font></p>
                                 <ul class="actions">
                                     <li><a href="#" class="button">Click Here</a></li>
 				</ul>
@@ -321,8 +453,8 @@
                             <header>
                                 <h3>MHi-LIBRARY</h3>
                             </header>
-                            <p class="blueText">A growing library of measures spanning function and symptom domains. Widely
-                                accepted and used in clinical practice and research.</p>
+                            <p><font color="#0b5dba">A growing library of measures spanning function and symptom domains. Widely
+                                accepted and used in clinical practice and research.</font></p>
                                 <ul class="actions">
                                     <li><a href="#" class="button">Click Here</a></li>
                                 </ul>
@@ -334,8 +466,8 @@
                             <header>
                                 <h3>MHi-RESOURCES</h3>
                             </header>
-                            <p class="blueText">Would you like more information about MHi-CARE? Are you interested
-                                in finding out how to make use of MHi-CARE in your clinical practice?</p>
+                            <p><font color="#0b5dba">Would you like more information about MHi-CARE? Are you interested
+                                in finding out how to make use of MHi-CARE in your clinical practice?</font></p>
                                 <ul class="actions">
                                     <li><a href="./library" class="button">Click Here</a></li>
 				</ul>
@@ -400,145 +532,14 @@
                 </div>
             </div>
 	</div>
-        
+		
         <!-- Scripts -->
-        <script src="./assets/js/jquery.dropotron.min.js"></script>
+	<script src="./assets/js/jquery.dropotron.min.js"></script>
 	<script src="./assets/js/skel.min.js"></script>
 	<script src="./assets/js/util.js"></script>
 	<script src="./assets/js/main.js"></script>
-	<script type="text/javascript">
-            // Get the modal
-            var modal = document.getElementById('ssModal');
-            
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById('ss-use');
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            }  
-            
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-            
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() { 
-                modal.style.display = "none";
-            };    
-            // Get the modal
-            var modal = document.getElementById('regModal');
-            
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById('reg-use');
-            var modalImg = document.getElementById("img02");
-            var captionText = document.getElementById("caption");
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            };
-            
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-            
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() { 
-                modal.style.display = "none";
-            };
-            
-            // Get the modal
-            var modal = document.getElementById('edcModal');
-
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById('edc-use');
-            var modalImg = document.getElementById("img03");
-            var captionText = document.getElementById("caption");
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            };
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() { 
-                modal.style.display = "none";
-            };
-       
-            // Get the modal
-            var modal = document.getElementById('dexModal');
-
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById('dex-use');
-            var modalImg = document.getElementById("img04");
-            var captionText = document.getElementById("caption");
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            };
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() { 
-                modal.style.display = "none";
-            };
-        
-            // Get the modal
-            var modal = document.getElementById('recModal');
-
-            // Get the image and insert it inside the modal - use its "alt" text as a caption
-            var img = document.getElementById('rec-use');
-            var modalImg = document.getElementById("img05");
-            var captionText = document.getElementById("caption");
-            img.onclick = function(){
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            };
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() { 
-                modal.style.display = "none";
-            };
-      
-            var slideIndex = 1;
-                showSlides(slideIndex);
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
-                if (n > slides.length) {slideIndex = 1;} 
-                if (n < 1) {slideIndex = slides.length;}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none"; 
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block"; 
-                dots[slideIndex-1].className += " active";
-            }
-        </script>	
 	<!--[if lte IE 8]><script src="./assets/js/ie/respond.min.js"></script><![endif]-->
 	<!-- script src="./assets/js/jquery.min.js"></script> -->
+
     </body>
 </html>

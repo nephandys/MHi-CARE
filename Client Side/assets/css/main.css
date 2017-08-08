@@ -1663,6 +1663,10 @@
 		text-align: center;
 	}
 
+        p.blueText {
+            color:#0b5dba;
+        }
+        
 /* Sections/Article */
 
 	section, article {
@@ -2905,3 +2909,5 @@
 			#footer header.major {
 				margin-bottom: 1em;
                         }
+  
+                        

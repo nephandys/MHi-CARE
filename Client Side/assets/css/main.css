@@ -1667,6 +1667,201 @@
             color:#0b5dba;
         }
         
+/* MHi-RESOURCES - Slideshow and Modals */
+            div#mhiResourcesSlideShow img.use-case {
+                cursor:pointer;
+                height: 500px;
+                width: 100%;
+            }
+                
+            div#mhiResourcesSlideShow * {box-sizing:border-box}
+
+            /* Slideshow container */
+            div#mhiResourcesSlideShow div.slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            div#mhiResourcesSlideShow div.mySlides {
+                display: none;
+            }
+
+            /* Next & previous buttons */
+            div#mhiResourcesSlideShow div.resourcesSlideShowPrevNext a.prev, a.next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: #0b5dba;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 5px;
+                border: 0 none;
+            }
+
+            /* Position the "next button" to the right */
+            div#mhiResourcesSlideShow div.resourcesSlideShowPrevNext a.next {
+                right: 0;
+                border-radius: 5px;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            div#mhiResourcesSlideShow div.resourcesSlideShowPrevNext a.prev:hover, a.next:hover {
+                background-color: #D8E0FB;
+            }
+                
+            /* The dots/bullets/indicators */
+            div#mhiResourcesSlideShow div.slideShowDots .dot {
+                cursor:pointer;
+                height: 13px;
+                width: 13px;
+                margin: 0 2px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                transition: background-color 0.6s ease;
+            }
+
+            div#mhiResourcesSlideShow div.slideShowDots .dot:hover {
+                background-color: #717171;
+            }
+
+            /* Fading animation */
+            div#mhiResourcesSlideShow div.fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+            
+            /* The Modal (background) */
+            div#mhiResourcesSlideShow div.modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            }
+
+            /* Modal Content (image) */
+            div#mhiResourcesSlideShow img.modal-content {
+                margin: auto;
+                display: block;
+                width: 90%;
+                max-width: 1000px;
+            }
+
+            /* Caption of Modal Image */
+            div#mhiResourcesSlideShow div.modal div#caption {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+
+            /* Add Animation */
+            div#mhiResourcesSlideShow div.modal-content, div.modal div#caption {    
+                -webkit-animation-name: zoom;
+                -webkit-animation-duration: 0.6s;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+            @-webkit-keyframes zoom {
+                from {-webkit-transform:scale(0)} 
+                to {-webkit-transform:scale(1)}
+            }
+
+            @keyframes zoom {
+                from {transform:scale(0)} 
+                to {transform:scale(1)}
+            }
+
+            /* The Close Button */
+            div#mhiResourcesSlideShow div.modal .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            div#mhiResourcesSlideShow div.modal .close:hover,
+            div#mhiResourcesSlideShow div.modal .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px){
+                div#mhiResourcesSlideShow img.modal-content {
+                    width: 100%;
+                }
+            }
+        
+    /*MHi-REQUEST */
+            .qmark {
+                height:15px;
+                width:15px;
+            }
+                    
+            .tool-head {
+                font-weight: 500;
+            }
+                    
+            .hidden {
+                display: none;
+            }
+                    
+            .model-row {
+                display: none;
+            }
+                    
+            .contact-row {
+                display: none;
+            }
+		
+            .quest-header {
+                font-size: 125%;
+            }
+              
+            #contact-table {
+                margin-bottom:0;
+            }
+                    
+            #stm-con {
+                margin-bottom:0;
+                padding-top:0;
+                border-top:0;
+            }
+
 /* Sections/Article */
 
 	section, article {
@@ -1747,6 +1942,13 @@
 		opacity: 0.85;
 	}
 
+/*MHi-ACCOUNT - Profile Picture */
+    .profilePicture {
+        width: 200px;
+        height: 200px;
+        margin-left: 50px; 
+    }
+            
 /* List */
 
 	ul.default {
@@ -1921,9 +2123,17 @@
 			
 /* Measures Table */		
 	#mtable th:hover {
-			cursor: pointer;
+            cursor: pointer;
 	}
-
+        
+        table#mtable tr:nth-child(2n+1) {
+            background: #edf4ff;
+        } 
+/*MHi-PROJECTS Table */
+    table#mhiProjectTable tr:nth-child(2n+1) {
+        background: #edf4ff;
+    } 
+            
 /* Button */
 
 	input[type="button"],

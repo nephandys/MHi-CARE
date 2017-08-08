@@ -26,48 +26,13 @@
             webshim.polyfill('forms forms-ext');
                     
             $(function(){
-                $('[type="date"].sub-date').prop('defaultValue', function(){
+                $('[type="date"].submissionDate').prop('defaultValue', function(){
                     return new Date().toJSON().split('T')[0];
                 });
             });
         </script>
-
-        <style>
-            .qmark {
-                height:15px;
-                width:15px;
-            }
-                    
-            .tool-head {
-                font-weight: 500;
-            }
-                    
-            .hidden {
-                display: none;
-            }
-                    
-            .model-row {
-                display: none;
-            }
-                    
-            .contact-row {
-                display: none;
-            }
-		
-            .quest-header {
-                font-size: 125%;
-            }
-              
-            #contact-table {
-                margin-bottom:0;
-            }
-                    
-            #stm-con {
-                margin-bottom:0;
-                padding-top:0;
-                border-top:0;
-            }
-                      
+        
+        <style>                
             ul {
                 padding-left: 20px;
             }    
@@ -1266,8 +1231,8 @@
 	<script src="./assets/js/main.js"></script>
 	<!--[if lte IE 8]><script src="./assets/js/ie/respond.min.js"></script><![endif]-->
 	<!-- script src="./assets/js/jquery.min.js"></script> -->
-        <script type="text/javascript">
-        // Study Team Members Table - Add/Remove Rows
+        <script>
+            // Study Team Members Table - Add/Remove Rows
             function addTableRow() {
                 var $tableRow = $('tr.model-row:first-child');
                 var $clonedRow = $tableRow.clone().show();
@@ -1489,7 +1454,7 @@
                     }
                 });
             });
-        </script>
+            </script>
 
     </body>
 </html>

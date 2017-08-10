@@ -1668,6 +1668,10 @@
         }
         
 /* MHi-RESOURCES - Slideshow and Modals */
+            .resourcesImageWrapper {
+                z-index:0;
+            }
+            
             div#mhiResourcesSlideShow img.use-case {
                 cursor:pointer;
                 height: 500px;
@@ -1726,7 +1730,8 @@
                 transition: background-color 0.6s ease;
             }
 
-            div#mhiResourcesSlideShow div.slideShowDots .dot:hover {
+            div#mhiResourcesSlideShow div.slideShowDots .dot:hover,
+            div#mhiResourcesSlideShow div.slideShowDots .active {
                 background-color: #717171;
             }
 
@@ -1827,6 +1832,10 @@
             }
         
     /*MHi-REQUEST */
+            ul.requestUOList {
+                padding-left: 20px;
+            }
+            
             .qmark {
                 height:15px;
                 width:15px;

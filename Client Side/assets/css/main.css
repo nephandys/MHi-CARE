@@ -1832,6 +1832,38 @@
             }
         
     /*MHi-REQUEST */
+            #patStudyEstimateGenderOtherValue,
+            #patStudyEstimateRaceOtherValue,
+            #patStudyEstimateEthnicityOtherValue,
+            #patStudyEstimateLocationOtherValue,
+            #patStudyEstimateLevelOfCareOtherValue,
+            #patRegistryGenderOtherValue,
+            #patRegistryRaceOtherValue,
+            #patRegistryEthnicityOtherValue,
+            #patRegistryLocationOtherValue,
+            #patRegistryLevelOfCareOtherValue,
+            #eDataCaptureGenderOtherValue,
+            #eDataCaptureRaceOtherValue,
+            #eDataCaptureEthnicityOtherValue,
+            #eDataCaptureLocationOtherValue,
+            #eDataCaptureLevelOfCareOtherValue,
+            #dataExtractionGenderOtherValue,
+            #dataExtractionRaceOtherValue,
+            #dataExtractionEthnicityOtherValue,
+            #dataExtractionLocationOtherValue,
+            #dataExtractionLevelOfCareOtherValue,
+            #patRecruitmentGenderOtherValue,
+            #patRecruitmentRaceOtherValue,
+            #patRecruitmentEthnicityOtherValue,
+            #patRecruitmentLocationOtherValue,
+            #patRecruitmentLevelOfCareOtherValue {
+                display:none;
+            }
+            
+            .inline {
+                display: inline;
+            }
+            
             ul.requestUOList {
                 padding-left: 20px;
             }

@@ -1692,7 +1692,8 @@
             }
 
             /* Next & previous buttons */
-            div#mhiResourcesSlideShow div.resourcesSlideShowPrevNext a.prev, a.next {
+            div#mhiResourcesSlideShow div.resourcesSlideShowPrevNext a.prev,
+            div#mhiResourcesSlideShow div.resourcesSlideShowPrevNext a.next {
                 cursor: pointer;
                 position: absolute;
                 top: 50%;

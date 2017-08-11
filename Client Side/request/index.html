@@ -1199,27 +1199,6 @@
 		
         <!-- Scripts -->
         <script src="./assets/js/js-webshim/minified/polyfiller.js"></script>
-	<script>
-            webshim.setOptions('forms', {
-                lazyCustomMessages: true,
-                addValidators: true  
-            }); 
-                    
-            webshim.setOptions('forms-ext', {
-                replaceUI: 'auto',
-                widgets: {
-                    startView: 2
-                }
-            });
-                    
-            webshim.polyfill('forms forms-ext');
-                    
-            $(function(){
-                $('[type="date"].submissionDate').prop('defaultValue', function(){
-                    return new Date().toJSON().split('T')[0];
-                });
-            });
-        </script>
         <script src="./assets/js/jquery.dropotron.min.js"></script>
 	<script src="./assets/js/skel.min.js"></script>
 	<script src="./assets/js/util.js"></script>

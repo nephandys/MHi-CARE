@@ -2,7 +2,7 @@
 //WEBSHIMS POLYFILL - MHi-REQUEST
             webshim.setOptions('forms', {
                 lazyCustomMessages: true,
-                addValidators: true  
+                addValidators: true           
             }); 
                     
             webshim.setOptions('forms-ext', {

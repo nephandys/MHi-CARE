@@ -93,7 +93,7 @@
 	  	// If rowcount === 1, hide first row, don't remove it!!
                 var rowCount = $memberTRs.length;
                     if (rowCount === 1) {
-                        $('tr.model-row:first-child').hide();
+                        $('tr.model-row:first-child').hide().setAttribute('disabled');
                             return;
                         }
                     $memberTRs.last().remove();
@@ -164,13 +164,257 @@
                     addConTableRow();
                 });
             });
+            
+        // Patient Study Estimate Gender Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patStudyEstimateGenderOther').change(function(){
+                    if(this.checked)
+                $('#patStudyEstimateGenderOtherValue').fadeIn('slow');
+                    else
+                $('#patStudyEstimateGenderOtherValue').fadeOut('slow');
+                });
+            });
+
+        // Patient Study Estimate Race Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patStudyEstimateRaceOther').change(function(){
+                    if(this.checked)
+                $('#patStudyEstimateRaceOtherValue').fadeIn('slow');
+                    else
+                $('#patStudyEstimateRaceOtherValue').fadeOut('slow');
+                });
+            });
+            
+        // Patient Study Estimate Ethnicity Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patStudyEstimateEthnicityOther').change(function(){
+                    if(this.checked)
+                $('#patStudyEstimateEthnicityOtherValue').fadeIn('slow');
+                    else
+                $('#patStudyEstimateEthnicityOtherValue').fadeOut('slow');
+                });
+            });
+       
+        // Patient Study Estimate Location Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patStudyEstimateLocationOther').change(function(){
+                    if(this.checked)
+                $('#patStudyEstimateLocationOtherValue').fadeIn('slow');
+                    else
+                $('#patStudyEstimateLocationOtherValue').fadeOut('slow');
+                });
+            });
         
-        // Show Hidden Div 
-            function showMe (it, box) {
-                var vis = (box.checked) ? "block" : "none";
-                document.getElementById(it).style.display = vis;
-            }
+        // Patient Study Estimate Level of Care Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patStudyEstimateLevelOfCareOther').change(function(){
+                    if(this.checked)
+                $('#patStudyEstimateLevelOfCareOtherValue').fadeIn('slow');
+                    else
+                $('#patStudyEstimateLevelOfCareOtherValue').fadeOut('slow');
+                });
+            });
+
+        // Patient Registry Gender Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRegistryGenderOther').change(function(){
+                    if(this.checked)
+                $('#patRegistryGenderOtherValue').fadeIn('slow');
+                    else
+                $('#patRegistryGenderOtherValue').fadeOut('slow');
+                });
+            });
         
+        // Patient Registry Race Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRegistryRaceOther').change(function(){
+                    if(this.checked)
+                $('#patRegistryRaceOtherValue').fadeIn('slow');
+                    else
+                $('#patRegistryRaceOtherValue').fadeOut('slow');
+                });
+            });
+            
+        // Patient Registry Ethnicity Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRegistryEthnicityOther').change(function(){
+                    if(this.checked)
+                $('#patRegistryEthnicityOtherValue').fadeIn('slow');
+                    else
+                $('#patRegistryEthnicityOtherValue').fadeOut('slow');
+                });
+            });
+       
+        // Patient Registry Location Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRegistryLocationOther').change(function(){
+                    if(this.checked)
+                $('#patRegistryLocationOtherValue').fadeIn('slow');
+                    else
+                $('#patRegistryLocationOtherValue').fadeOut('slow');
+                });
+            });
+        
+        // Patient Registry Level of Care Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRegistryLevelOfCareOther').change(function(){
+                    if(this.checked)
+                $('#patRegistryLevelOfCareOtherValue').fadeIn('slow');
+                    else
+                $('#patRegistryLevelOfCareOtherValue').fadeOut('slow');
+                });
+            });
+  
+        // Electronic Data Capture Gender Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#eDataCaptureGenderOther').change(function(){
+                    if(this.checked)
+                $('#eDataCaptureGenderOtherValue').fadeIn('slow');
+                    else
+                $('#eDataCaptureGenderOtherValue').fadeOut('slow');
+                });
+            });
+        
+        // Electronic Data Capture Race Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#eDataCaptureRaceOther').change(function(){
+                    if(this.checked)
+                $('#eDataCaptureRaceOtherValue').fadeIn('slow');
+                    else
+                $('#eDataCaptureRaceOtherValue').fadeOut('slow');
+                });
+            });
+            
+        // Electronic Data Capture Ethnicity Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#eDataCaptureEthnicityOther').change(function(){
+                    if(this.checked)
+                $('#eDataCaptureEthnicityOtherValue').fadeIn('slow');
+                    else
+                $('#eDataCaptureEthnicityOtherValue').fadeOut('slow');
+                });
+            });
+       
+        // Electronic Data Capture Location Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#eDataCaptureLocationOther').change(function(){
+                    if(this.checked)
+                $('#eDataCaptureLocationOtherValue').fadeIn('slow');
+                    else
+                $('#eDataCaptureLocationOtherValue').fadeOut('slow');
+                });
+            });
+        
+        // Electronic Data Capture Level of Care Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#eDataCaptureLevelOfCareOther').change(function(){
+                    if(this.checked)
+                $('#eDataCaptureLevelOfCareOtherValue').fadeIn('slow');
+                    else
+                $('#eDataCaptureLevelOfCareOtherValue').fadeOut('slow');
+                });
+            });
+
+        // Data Extraction Gender Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#dataExtractionGenderOther').change(function(){
+                    if(this.checked)
+                $('#dataExtractionGenderOtherValue').fadeIn('slow');
+                    else
+                $('#dataExtractionGenderOtherValue').fadeOut('slow');
+                });
+            });
+        
+        // Data Extraction Race Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#dataExtractionRaceOther').change(function(){
+                    if(this.checked)
+                $('#dataExtractionRaceOtherValue').fadeIn('slow');
+                    else
+                $('#dataExtractionRaceOtherValue').fadeOut('slow');
+                });
+            });
+            
+        // Data Extraction Ethnicity Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#dataExtractionEthnicityOther').change(function(){
+                    if(this.checked)
+                $('#dataExtractionEthnicityOtherValue').fadeIn('slow');
+                    else
+                $('#dataExtractionEthnicityOtherValue').fadeOut('slow');
+                });
+            });
+       
+        // Data Extraction Location Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#dataExtractionLocationOther').change(function(){
+                    if(this.checked)
+                $('#dataExtractionLocationOtherValue').fadeIn('slow');
+                    else
+                $('#dataExtractionLocationOtherValue').fadeOut('slow');
+                });
+            });
+        
+        // Data Extraction Level of Care Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#dataExtractionLevelOfCareOther').change(function(){
+                    if(this.checked)
+                $('#dataExtractionLevelOfCareOtherValue').fadeIn('slow');
+                    else
+                $('#dataExtractionLevelOfCareOtherValue').fadeOut('slow');
+                });
+            });
+
+        // Patient Recruitment Gender Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRecruitmentGenderOther').change(function(){
+                    if(this.checked)
+                $('#patRecruitmentGenderOtherValue').fadeIn('slow');
+                    else
+                $('#patRecruitmentGenderOtherValue').fadeOut('slow');
+                });
+            });
+        
+        // Patient Recruitment Race Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRecruitmentRaceOther').change(function(){
+                    if(this.checked)
+                $('#patRecruitmentRaceOtherValue').fadeIn('slow');
+                    else
+                $('#patRecruitmentRaceOtherValue').fadeOut('slow');
+                });
+            });
+            
+        // Patient Recruitment Ethnicity Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRecruitmentEthnicityOther').change(function(){
+                    if(this.checked)
+                $('#patRecruitmentEthnicityOtherValue').fadeIn('slow');
+                    else
+                $('#patRecruitmentEthnicityOtherValue').fadeOut('slow');
+                });
+            });
+       
+        // Patient Recruitment Location Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRecruitmentLocationOther').change(function(){
+                    if(this.checked)
+                $('#patRecruitmentLocationOtherValue').fadeIn('slow');
+                    else
+                $('#patRecruitmentLocationOtherValue').fadeOut('slow');
+                });
+            });
+        
+        // Patient Recruitment Level of Care Other - Fade In/Out 
+            $(document).ready(function(){
+                $('#patRecruitmentLevelOfCareOther').change(function(){
+                    if(this.checked)
+                $('#patRecruitmentLevelOfCareOtherValue').fadeIn('slow');
+                    else
+                $('#patRecruitmentLevelOfCareOtherValue').fadeOut('slow');
+                });
+            });
+
         // Submitter Info - Fade In/Out 
             $(document).ready(function() {
                 $('input[type=radio][name=submitterCheck]').change(function() {
@@ -186,30 +430,30 @@
         // Patient Study Estimate - Fade In/Out 
             $(document).ready(function(){
                 $('#patStudyEstimateCheck').change(function(){
-                    if(!this.checked)
-                $('#snapshot').fadeOut('slow');
-                    else
+                    if(this.checked)
                 $('#snapshot').fadeIn('slow');
+                    else
+                $('#snapshot').fadeOut('slow');
                 });
             });
        
         // Patient Registry - Fade In/Out
             $(document).ready(function(){
                 $('#patRegistryCheck').change(function(){
-                    if(!this.checked)
-                $('#registry').fadeOut('slow');
-                    else
+                    if(this.checked)
                 $('#registry').fadeIn('slow');
+                    else
+                $('#registry').fadeOut('slow');
                 });
             });
           
         // Electronic Data Capture - Fade In/Out 
             $(document).ready(function(){
                 $('#electronicDataCaptureCheck').change(function(){
-                    if(!this.checked)
-                $('#edc').fadeOut('slow');
-                    else
+                    if(this.checked)
                 $('#edc').fadeIn('slow');
+                    else
+                $('#edc').fadeOut('slow');
 
                 });
             });
@@ -217,20 +461,20 @@
         // Data Extraction - Fade In/Out
             $(document).ready(function(){
                 $('#dataExtractionCheck').change(function(){
-                    if(!this.checked)
-                $('#dex').fadeOut('slow');
-                    else
+                    if(this.checked)
                 $('#dex').fadeIn('slow');
+                    else
+                $('#dex').fadeOut('slow');
                 });
             });
        
         // Patient Recruitment - Fade In/Out 
             $(document).ready(function(){
                 $('#patRecruitmentCheck').change(function(){
-                    if(!this.checked)
-                $('#recruit').fadeOut('slow');
-                    else
+                    if(this.checked)
                 $('#recruit').fadeIn('slow');
+                    else
+                $('#recruit').fadeOut('slow');
                 });
             });
       
@@ -285,10 +529,10 @@
         // Contact Member of Study Team - Fade In/Out - Who to Contact? 
             $(document).ready(function(){
                 $('#patRecruitmentContactStudyTeam').change(function(){
-                    if(!this.checked)
-                $('#contact').fadeOut('slow');
-                    else
+                    if(this.checked)
                 $('#contact').fadeIn('slow');
+                    else
+                $('#contact').fadeOut('slow');
                 });
             });
           

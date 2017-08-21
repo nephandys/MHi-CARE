@@ -7,7 +7,7 @@ package edu.jhu.mhicareweb;
 
 /**
  *
- * @author skarkee
+ * @author spkar
  */
 public class MHICareSession {
     private String myData;

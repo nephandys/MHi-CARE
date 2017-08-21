@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" entityID="https://testshib.johnshopkins.edu/idp/shibboleth">
+
+    <IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">johnshopkins.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDUDCCAjigAwIBAgIVALNEV8fPyLfxjmFC3p5MkULRZoewMA0GCSqGSIb3DQEB
+BQUAMCQxIjAgBgNVBAMTGXRlc3RzaGliLmpvaG5zaG9wa2lucy5lZHUwHhcNMTMw
+NjA1MTcwNzUzWhcNMzMwNjA1MTcwNzUzWjAkMSIwIAYDVQQDExl0ZXN0c2hpYi5q
+b2huc2hvcGtpbnMuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+kYNQn1gZAPXPWq95K2aiHiZo4vCNwHz+Z7liZfRB28Y15G0SFZV/pGz0rpU2O8Ld
+csRUsBUG2PagDLyk3EJGV+ZyFPT8Mfx21EqkYP8JhJepzucF0TGtN57xJBCk8wi5
+ktB/uapj8eZzUlodozwLLyaiUf04zrTWKF8A7Jfz6c/8Ffp/tkxDadVi6NeBlvRf
+xZmG4EFpe31ACMzRPPVH4oYtvTH3x+8dKOy8rKKE9noUdhKb3a9evqO6F7K580Uv
+NSZBRt8HiJ+5/sZDKVbKcflxjAfNzwH2HtWxQMKRfIFg7GxHdHWudKXtsuXEzGxK
+wyHkHQN2ZT9FD1fKjJmeiQIDAQABo3kwdzBWBgNVHREETzBNghl0ZXN0c2hpYi5q
+b2huc2hvcGtpbnMuZWR1hjBodHRwczovL3Rlc3RzaGliLmpvaG5zaG9wa2lucy5l
+ZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFDkL3xqFeYlpof7jhce/buLX++L8
+MA0GCSqGSIb3DQEBBQUAA4IBAQBcXL4kZ1Owga6awRZ0a7hbi17XTA/1sbT4o2bw
+4e3EzMBYjii4ITQB2XhA306deYqaNUOVOtDYfeEZ5rEW3uvvK8A98UnQiYTtGjFD
+SOGtvxgnVkT4zKKrY0pupajoIEAShmg1weS25c8Eito3+Ed1Le8kwZLzAAJv8KAg
+rkUqkyll6ZlTgE12X46D1UofNkyLqQQ/pfmHMJxys0jWoOXldcY8st1qdAJokeX+
+bDzgUuWNt4nuoTmmOBWX0G1aPK8GHp8M97D5ksVdkGrcDvUr0XVUzxx9tbfNxu4K
+Co0vObfQRwIiO6n5Qop+ayeEoHR2Lq35zAkEcfR/ejl0Tq2X
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://testshib.johnshopkins.edu:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://testshib.johnshopkins.edu:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+        
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://testshib.johnshopkins.edu/idp/profile/SAML2/Redirect/SLO" />
+        
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://testshib.johnshopkins.edu/idp/profile/SAML2/POST/SLO" />
+        
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://testshib.johnshopkins.edu:8443/idp/profile/SAML2/SOAP/SLO" />
+                                   
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://testshib.johnshopkins.edu/idp/profile/Shibboleth/SSO"/>
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://testshib.johnshopkins.edu/idp/profile/SAML2/POST/SSO"/>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://testshib.johnshopkins.edu/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+        
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://testshib.johnshopkins.edu/idp/profile/SAML2/Redirect/SSO"/>
+    </IDPSSODescriptor>
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">johnshopkins.edu</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDUDCCAjigAwIBAgIVALNEV8fPyLfxjmFC3p5MkULRZoewMA0GCSqGSIb3DQEB
+BQUAMCQxIjAgBgNVBAMTGXRlc3RzaGliLmpvaG5zaG9wa2lucy5lZHUwHhcNMTMw
+NjA1MTcwNzUzWhcNMzMwNjA1MTcwNzUzWjAkMSIwIAYDVQQDExl0ZXN0c2hpYi5q
+b2huc2hvcGtpbnMuZWR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+kYNQn1gZAPXPWq95K2aiHiZo4vCNwHz+Z7liZfRB28Y15G0SFZV/pGz0rpU2O8Ld
+csRUsBUG2PagDLyk3EJGV+ZyFPT8Mfx21EqkYP8JhJepzucF0TGtN57xJBCk8wi5
+ktB/uapj8eZzUlodozwLLyaiUf04zrTWKF8A7Jfz6c/8Ffp/tkxDadVi6NeBlvRf
+xZmG4EFpe31ACMzRPPVH4oYtvTH3x+8dKOy8rKKE9noUdhKb3a9evqO6F7K580Uv
+NSZBRt8HiJ+5/sZDKVbKcflxjAfNzwH2HtWxQMKRfIFg7GxHdHWudKXtsuXEzGxK
+wyHkHQN2ZT9FD1fKjJmeiQIDAQABo3kwdzBWBgNVHREETzBNghl0ZXN0c2hpYi5q
+b2huc2hvcGtpbnMuZWR1hjBodHRwczovL3Rlc3RzaGliLmpvaG5zaG9wa2lucy5l
+ZHUvaWRwL3NoaWJib2xldGgwHQYDVR0OBBYEFDkL3xqFeYlpof7jhce/buLX++L8
+MA0GCSqGSIb3DQEBBQUAA4IBAQBcXL4kZ1Owga6awRZ0a7hbi17XTA/1sbT4o2bw
+4e3EzMBYjii4ITQB2XhA306deYqaNUOVOtDYfeEZ5rEW3uvvK8A98UnQiYTtGjFD
+SOGtvxgnVkT4zKKrY0pupajoIEAShmg1weS25c8Eito3+Ed1Le8kwZLzAAJv8KAg
+rkUqkyll6ZlTgE12X46D1UofNkyLqQQ/pfmHMJxys0jWoOXldcY8st1qdAJokeX+
+bDzgUuWNt4nuoTmmOBWX0G1aPK8GHp8M97D5ksVdkGrcDvUr0XVUzxx9tbfNxu4K
+Co0vObfQRwIiO6n5Qop+ayeEoHR2Lq35zAkEcfR/ejl0Tq2X
+
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://testshib.johnshopkins.edu:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+        
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://testshib.johnshopkins.edu:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+        
+        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        
+    </AttributeAuthorityDescriptor>
+    
+</EntityDescriptor>

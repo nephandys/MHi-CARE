@@ -1,0 +1,12 @@
+edu\jhu\mhicareweb\business\Credential.class
+edu\jhu\mhicareweb\business\MHIRequestDataTest.class
+edu\jhu\mhicareweb\MHICareSession.class
+edu\jhu\mhicareweb\entities\UserRolesJpaController.class
+edu\jhu\mhicareweb\entities\UsersJpaController.class
+edu\jhu\mhicareweb\exceptions\NonexistentEntityException.class
+edu\jhu\mhicareweb\business\MHIRequestData.class
+edu\jhu\mhicareweb\exceptions\IllegalOrphanException.class
+edu\jhu\mhicareweb\entities\Mhirequest.class
+edu\jhu\mhicareweb\entities\UserRoles.class
+edu\jhu\mhicareweb\entities\Users.class
+edu\jhu\mhicareweb\exceptions\PreexistingEntityException.class

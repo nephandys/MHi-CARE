@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author skarkee
+ * @author spkar
  */
 public class MHIRequestDataTest {   
     String piName;

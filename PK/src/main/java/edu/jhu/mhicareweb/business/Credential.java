@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author skarkee
+ * @author spkar
  */
 public class Credential {
     private String user;
